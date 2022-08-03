@@ -1,25 +1,25 @@
 const router = require('express').Router();
 
 router.get("/", async (req, res) => {
-    res.render("landing");
+    res.render("landing", {title: "Carbon Combaters"});
   });
 
 
   router.get("/profile", async (req, res) => {
-    res.render("profile");
+    res.render("profile", {title: "Profile"});
   });
 
 
   router.get("/learn", async (req, res) => {
-    res.render("learnMore");
+    res.render("learnMore",{title: "Learn More"});
   });
 
   router.get("/sign", async (req, res) => {
-    res.render("signIn");
+    res.render("signIn", {title: "Sign In"});
   });
 
   router.get("/questions", async (req, res) => {
-    res.render("questions");
+    res.render("questions", {title: "Profile Questions"});
   });
   module.exports = router;
 

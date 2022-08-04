@@ -19,13 +19,23 @@ h1{
     color: blue;
     font-size: 3rem;
 }
+
 h3{
     color: blue;
 }
+
 li{
     list-style-type: none;
 }
 
 .dropdown-toggle {
     background-color: #104009;
+}
+
+.sign-up-img{
+    position: absolute;
+    border-radius: 50%;
+    width: 75%;
+    height: 65%;
+    left: 10%
 }

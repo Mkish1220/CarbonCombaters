@@ -20,4 +20,8 @@ router.get("/questions", async (req, res) => {
   res.render("questions", { title: "Profile Questions" });
 });
 
+router.get("/edit", async (req, res) => {
+  res.render("edit", { title: "Learn More About You" });
+});
+
 module.exports = router;

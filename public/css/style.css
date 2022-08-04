@@ -13,7 +13,8 @@
       top:0;
       left:0;
       z-index:1;
-  }
+  } 
+   
 h1{
     color: white;
     font-size: 3rem;
@@ -23,4 +24,8 @@ h3{
 }
 li{
     list-style-type: none;
+}
+
+.dropdown-toggle {
+    background-color: #104009;
 }

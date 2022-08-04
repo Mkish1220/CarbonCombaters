@@ -1,4 +1,9 @@
- .container { position:relative; }
+
+ .container { 
+    position:relative;
+    margin:0;
+    padding:0;
+ }
   .container video {
       position:relative;
       z-index:0;
@@ -15,4 +20,7 @@ h1{
 }
 h3{
     color: white;
+}
+li{
+    list-style-type: none;
 }

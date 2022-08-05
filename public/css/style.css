@@ -40,6 +40,11 @@ li{
     left: 10%
 }
 
+.learnReferences{
+    display:inline-block;
+    margin-top: 10%;
+    font-size: .8rem;
+}
 
 /* ====================================== HIGH CHARTS PIE CHART LEARN MORE PAGE====================================== */
 .highcharts-figure,

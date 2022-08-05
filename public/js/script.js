@@ -103,31 +103,34 @@ Highcharts.chart('containerB', {
             name: 'Passenger Car',
             y: 41,
             sliced: true,
-            selected: true
+            selected: true,
+            color: "red"
         }, {
             name: 'Medium or Heavy Duty Truck',
-            y: 24
+            y: 24,
+            color: "blue"
         }, {
-            name: 'Beverage',
-            y: 5.9
+            name: 'Light Duty Truck',
+            y: 17,
+            color: "pink"
+         
         }, {
-            name: 'Fish and Seafood',
-            y: 5.8
-        }, {
-            name: 'Eggs',
-            y: 2.8
-        }, {
-            name: 'Vegetables',
-            y: 2.6
-        }, {
-            name: 'Grain Products',
-            y: 2.1
-        }, {
-            name: 'Fruits',
-            y: 1.6
+            name: 'Commercial Aircraft',
+            y: 7,
+            color: "green"
         }, {
             name: 'Other',
-            y: 4.3
+            y: 5
+        }, {
+            name: 'Rail',
+            y: 2
+        }, {
+            name: 'Ships or Boats',
+            y: 2
+        }, {
+            name: 'Motorcycle or Bus',
+            y: 1,
+            color: "grey"
         }]
     }]
 });

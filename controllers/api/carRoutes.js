@@ -1,13 +1,12 @@
 const router = require('express').Router();
-const { Car } = require('../../models');
+const { Car, DataTypes } = require('../../models/car');
 const withAuth = require('../../utils/auth');
 const Sequelize = require('sequelize');
 
 
-
-  router.get('/make', async (req, res) => {
+  router.get('/:id', async (req, res) => {
     try {
-      const carData = await Car.findOne({
+      const carData = await Car.findByPk({
         where: {
           make: req.params.make
         },
@@ -23,6 +22,7 @@ const Sequelize = require('sequelize');
       res.status(200).json(carData);
     } catch (err) {
       res.status(500).json(err);
+      console.log(carData)
     }
   });
 

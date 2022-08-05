@@ -5,19 +5,22 @@ class Car extends Model {}
 
 Car.init(
 	{
-		Make: {
+		make: {
 			type: DataTypes.STRING,
 			allowNull: false,
+			primaryKey: true
 		},
-		Model: {
-			type: DataTypes.TEXT,
+		model: {
+			type: DataTypes.STRING,
 		},
-		Class: {
-			type: DataTypes.TEXT,
+		
+		class: {
+			type: DataTypes.STRING
 		},
-		Emissions: {
-			type: DataTypes.Integer,
-		},
+		// emissions: {
+		// 	type: DataTypes.INTEGER
+		// },
+		
 	},
 	{
 		sequelize,

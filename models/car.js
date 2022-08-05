@@ -17,9 +17,9 @@ Car.init(
 		class: {
 			type: DataTypes.STRING
 		},
-		// emissions: {
-		// 	type: DataTypes.INTEGER
-		// },
+		emissions: {
+			type: DataTypes.INTEGER
+		},
 		
 	},
 	{

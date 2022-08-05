@@ -4,9 +4,9 @@ const withAuth = require('../../utils/auth');
 const Sequelize = require('sequelize');
 
 
-  router.get('/:id', async (req, res) => {
+  router.get('/:make', async (req, res) => {
     try {
-      const carData = await Car.findByPk({
+      const carData = await Car.findOne({
         where: {
           make: req.params.make
         },

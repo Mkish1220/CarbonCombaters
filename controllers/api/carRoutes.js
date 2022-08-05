@@ -4,20 +4,26 @@ const withAuth = require('../../utils/auth');
 const Sequelize = require('sequelize');
 
 
-router.get('/:id', async (req, res) => {
+
+  router.get('/make', async (req, res) => {
     try {
-      const travellerData = await Traveller.findByPk(req.params.id, {
-        // JOIN with locations, using the Trip through table
-        include: [{ model: Location, through: Trip, as: 'planned_trips' }]
+      const carData = await Car.findOne({
+        where: {
+          make: req.params.make
+        },
       });
   
-      if (!travellerData) {
-        res.status(404).json({ message: 'No traveller found with this id!' });
+      if (!carData) {
+        res.status(404).json({
+          message: 'This car was not found'
+        });
         return;
       }
   
-      res.status(200).json(travellerData);
+      res.status(200).json(carData);
     } catch (err) {
       res.status(500).json(err);
     }
   });
+
+  module.exports = router;

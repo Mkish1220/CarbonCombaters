@@ -1,9 +1,9 @@
 const signUpFormHandler = async (event) => {
     event.preventDefault();
 console.log("hello")
-    const name = document.querySelector("signName").value.trim();
-    const email = document.querySelector("signEmail").value.trim();
-    const password = document.querySelector("signPass").value.trim();
+    const name = document.getElementById("signName").value.trim();
+    const email = document.getElementById("signEmail").value.trim();
+    const password = document.getElementById("signPass").value.trim();
 
     // sends a post to create the user
     if (name && email && password) {

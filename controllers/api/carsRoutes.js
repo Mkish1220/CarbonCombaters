@@ -5,26 +5,26 @@ const Cars  = require('../../models/cars');
 // const Sequelize = require('sequelize');
 
 // =========  original get route for the make ========
-//   router.get('/:make', async (req, res) => {
-//     try {
-//       const carsData = await Cars.findOne({
-//         where: {
-//           make: req.params.make
-//         },
-//       });
+  router.get('/:make', async (req, res) => {
+    try {
+      const carsData = await Cars.findOne({
+        where: {
+          make: req.params.make
+        },
+      });
   
-//       if (!carsData) {
-//         res.status(404).json({
-//           message: 'This car was not found'
-//         });
-//         return;
-//       }
+      if (!carsData) {
+        res.status(404).json({
+          message: 'This car was not found'
+        });
+        return;
+      }
   
-//       res.status(200).json(carsData);
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-//   });
+      res.status(200).json(carsData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
 
 
@@ -50,14 +50,14 @@ const Cars  = require('../../models/cars');
 //  ===================  get route just to test with some random data ==========
  
 
-// router.get('/', async (req, res) => {
-//   try {
-//     const carsData = await Cars.findAll();
-//     res.status(200).json(carsData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+router.get('/', async (req, res) => {
+  try {
+    const carsData = await Cars.findAll();
+    res.status(200).json(carsData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 

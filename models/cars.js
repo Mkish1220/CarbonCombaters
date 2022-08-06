@@ -21,11 +21,11 @@ Cars.init(
          type: DataTypes.STRING,
         },
         
-        Class: {
-         type: DataTypes.STRING
+        'vehicle class': {
+        type: DataTypes.STRING
         },
-        CO2: {
-         type: DataTypes.INTEGER
+        'CO2 Emissions(g/km)': {
+        type: DataTypes.INTEGER
         },
         
     },

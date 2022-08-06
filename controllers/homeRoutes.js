@@ -13,7 +13,7 @@ router.get("/learn", async (req, res) => {
 });
 
 router.get("/sign", async (req, res) => {
-  res.render("signIn", { title: "Sign In" });
+  res.render("signUp", { title: "Sign Up" });
 });
 
 router.get("/questions", async (req, res) => {

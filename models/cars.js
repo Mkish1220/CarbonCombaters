@@ -12,27 +12,27 @@ Cars.init(
         primaryKey: true,
         autoIncrement: true
       },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false
+        Make: {
+        type: DataTypes.STRING,
+        allowNull: false
             
-        }
-        // model: {
-        //  type: DataTypes.STRING,
-        // },
+        },
+        Model: {
+         type: DataTypes.STRING,
+        },
         
-        // class: {
-        //  type: DataTypes.STRING
-        // },
-        // emissions: {
-        //  type: DataTypes.INTEGER
-        // },
+        Class: {
+         type: DataTypes.STRING
+        },
+        CO2: {
+         type: DataTypes.INTEGER
+        },
         
     },
     {
         sequelize,
         timestamps: false,
-        modelName: 'cars',
+        modelName: 'cars'
     }
 );
 

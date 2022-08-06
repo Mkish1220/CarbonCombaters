@@ -113,7 +113,7 @@ input[type="number"] {
   /* Next & previous buttons */
   .prev, .next {
     cursor: pointer;
-    /* position: absolute; */
+    position: absolute;
     top: 50%;
     width: auto;
     margin-top: -30px;
@@ -127,7 +127,7 @@ input[type="number"] {
   
   /* Position the "next button" to the right */
   .next {
-    /* position: absolute; */
+    position: absolute;
     right: 0;
     border-radius: 3px 0 0 3px;
   }
@@ -158,9 +158,9 @@ input[type="number"] {
   }
   
   /* Add a background color to the active dot/circle */
-  /* .active, .dot:hover {
+  .active, .dot:hover {
     background-color: #717171;
-  } */
+  }
 /* ====================================== HIGH CHARTS PIE CHART LEARN MORE PAGE====================================== */
 /* ======================================== HIGH CHARTS GRAPH PROFILE PAGE ========================================== */
 #container {

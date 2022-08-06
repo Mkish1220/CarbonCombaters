@@ -1,13 +1,12 @@
 const signUpFormHandler = async (event) => {
     event.preventDefault();
-console.log("hello")
     const username = document.getElementById("signName").value.trim();
     const email = document.getElementById("signEmail").value.trim();
     const password = document.getElementById("signPass").value.trim();
 
     // sends a post to create the user
     if (username && email && password) {
-        const response = await fetch('/api/users/sign', {
+        const response = await fetch('/api/users', {
           method: 'POST',
           body: JSON.stringify({username, email, password}),
           headers: {'Content-Type': 'application/json'},

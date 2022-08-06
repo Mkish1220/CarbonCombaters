@@ -22,12 +22,4 @@ console.log("hello")
       }
     };
 
-
-
-
-
-
-
-
-
 document.addEventListener("submit", signUpFormHandler)

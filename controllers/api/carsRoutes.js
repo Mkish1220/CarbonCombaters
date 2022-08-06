@@ -5,9 +5,30 @@ const Cars  = require('../../models/cars');
 // const Sequelize = require('sequelize');
 
 // =========  original get route for the make ========
-  router.get('/:make', async (req, res) => {
+  router.get('/:model', async (req, res) => {
     try {
       const carsData = await Cars.findOne({
+        where: {
+          model: req.params.model
+        },
+      });
+  
+      if (!carsData) {
+        res.status(404).json({
+          message: 'This car was not found'
+        });
+        return;
+      }
+  
+      res.status(200).json(carsData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+  router.get('/:make', async (req, res) => {
+    try {
+      const carsData = await Cars.findAll({
         where: {
           make: req.params.make
         },

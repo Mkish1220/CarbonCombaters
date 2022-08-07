@@ -45,6 +45,11 @@ if (carInput === 0) {
     carScore = '';
 }
 
+if (carInput === 0) {
+    document.getElementsByClassName("gas").style.display = "none";
+    document.getElementsById("miles").style.display = "none";
+}
+
 if (carFuel === 0) {
     fuelScore = 0;
 } else {

@@ -94,6 +94,8 @@ $(".previous").click( function(){
   // document.addEventListener("submit", test, questionsFormHandler)
   // document.getElementById("submitBtn").addEventListener("submit", test, questionsFormHandler)
 
+
+  
 $(".submit").click(function(){
 	return false;
 })

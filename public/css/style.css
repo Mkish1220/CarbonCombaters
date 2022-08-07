@@ -1,5 +1,11 @@
-:root
+:root {
+  --ocean: #6393F2;
+  --sky: #BDD4F2;
+  --forest: #104009;
+  --plants: #3f8c1b;
+  --grass: #8CBF1F;
 
+}
  
  .container { 
     position:relative;
@@ -18,12 +24,12 @@
   } 
    
 h1{
-    color: blue;
+    color: var(--grass);
     font-size: 3rem;
 }
 
 h3{
-    color: blue;
+    color: var(--plants);
 }
 
 li{
@@ -31,7 +37,7 @@ li{
 }
 
 .dropdown-toggle {
-    background-color: #104009;
+    background-color: var(--forest);
 }
 
 .sign-up-img{
@@ -232,12 +238,12 @@ input[type="number"] {
     padding: 5px;
     }
     .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder, a {
-    color: #095484;
+    color: black;
     }
     .item input:hover, .item select:hover, .item textarea:hover {
     border: 1px solid transparent;
-    box-shadow: 0 0 6px 0 #095484;
-    color: #095484;
+    box-shadow: 0 0 6px 0 var(--grass);
+    color: black;
     }
     .item {
     position: relative;
@@ -290,21 +296,22 @@ input[type="number"] {
     width: 17px;
     height: 17px;
     border-radius: 50%;
-    border: 2px solid #095484;
+    border: 2px solid var(--grass);
     }
     label.check:before {
     top: 2px;
     width: 16px;
     height: 16px;
     border-radius: 2px;
-    border: 1px solid #095484;
+    border: 1px solid black;
+    }
     }
     input[type=checkbox]:checked + .check:before {
-    background: #095484;
+    background: var(--grass);
     }
     label.radio:after {
     left: 5px;
-    border: 3px solid #095484;
+    border: 3px solid var(--grass);
     }
     label.check:after {
     left: 4px;
@@ -324,23 +331,6 @@ input[type="number"] {
     }
     input[type=radio]:checked + label:after, input[type=checkbox]:checked + label:after {
     opacity: 1;
-    }
-    .btn-block {
-    margin-top: 10px;
-    text-align: center;
-    }
-    button {
-    width: 150px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px; 
-    background: #095484;
-    font-size: 16px;
-    color: #fff;
-    cursor: pointer;
-    }
-    button:hover {
-    background: #0666a3;
     }
     @media (min-width: 568px) {
     .city-item {

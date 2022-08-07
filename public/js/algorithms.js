@@ -1,4 +1,5 @@
 var carInput = document.getElementById("carInput");
+var carFuel = document.getElementById("carFuel");
 var carGas = document.getElementById("gasoline").value.trim();
 var carDiesel = document.getElementById("diesel").value.trim();
 var carElectric = document.getElementById("electric").value.trim();
@@ -41,12 +42,24 @@ var veganScore = '';
 if (carInput === 0) {
     carScore = 0;
 } else {
-    carScore = gasScore + dieselScore + carElectric;
+    carScore = '';
 }
+
+if (carInput === 0) {
+    document.getElementsByClassName("gas").style.display = "none";
+    document.getElementsById("miles").style.display = "none";
+}
+
+if (carFuel === 0) {
+    fuelScore = 0;
+} else {
+    fuelScore = gasScore + dieselScore + carElectric;
+}
+
     gasScore = carGas * .008887;
     dieselScore = carDiesel * .01018;
     electricScore = carElectric * .003288;
-    console.log(carScore);
+    console.log(fuelScore);
 
 if (milesWeekly === 0) {
     milesScore = 0;

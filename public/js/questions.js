@@ -2,6 +2,8 @@ var current_fs, next_fs, previous_fs;
 var left, opacity, scale;
 var animating;
 
+
+
 $(".next").click(function(){
     if(animating) return false;
     animating = true
@@ -31,6 +33,29 @@ $(".next").click(function(){
         },
         easing: 'easeInOutBack'
     })
+    const questionsFormHandler = async (event) => {
+        event.preventDefault();
+        const country = document.getElementById("country").value.trim();
+        // const email = document.getElementById("signEmail").value.trim();
+        // const password = document.getElementById("signPass").value.trim();
+    
+        // sends a post to create the user
+        if (country) {
+            const response = await fetch('/api/users', {
+              method: 'POST',
+              body: JSON.stringify({username, email, password}),
+              headers: {'Content-Type': 'application/json'},
+            });
+        
+            // takes the user to the questions page if ok
+            if (response.ok) {
+              document.location.replace('/questions');
+            } else {
+              alert("Please Try Again");
+            }
+          }
+        };
+
 })
 
 $(".previous").click(function(){

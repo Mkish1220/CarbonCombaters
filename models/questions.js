@@ -13,8 +13,6 @@ Questions.init(
       },
         country: {
         type: DataTypes.STRING,
-        allowNull: false
-            
         },
         state: {
          type: DataTypes.STRING,
@@ -24,8 +22,7 @@ Questions.init(
            },
         make: {
             type: DataTypes.STRING,
-           },   
-
+           },  
         model: {
             type: DataTypes.STRING
         },
@@ -45,7 +42,7 @@ Questions.init(
     {
         sequelize,
         timestamps: false,
-        modelName: 'cars'
+        modelName: 'questions'
     }
 );
 

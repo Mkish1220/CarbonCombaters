@@ -54,7 +54,7 @@
 
 			<label for="home">How many hours do you spend at home per day</label>
       <div class="input-group">
-        <input class="form-control" id="electricity" type="number" min="0">
+        <input class="form-control" id="electricity" type="electricity" min="0">
       </div>
 
 		</div> --}}
@@ -147,8 +147,12 @@
     <div class="input-group">
       <input class="form-control" id="water" type="number" min="0">
     </div>
+  	</div> --}}
 
-	</div> --}}
+{{!-- the option values below are getting passed into the DB--}}
+
+
+
 
     <div class="item">
         <p>How many water bottles do you drink in a day?<span class="required">*</span></p>
@@ -184,7 +188,7 @@
       </div>
 
   <br/>
-	<button id="calculate-btn" type="button" class="btn btn-success btn-lg btn-block">Calculate</button>
+	<button id="calculate-btn" type="submit" class="btn btn-success btn-lg btn-block">Calculate</button>
 </form>
 
 <script src="./js/newQuestions.js"></script>

@@ -10,7 +10,16 @@ NewQuestions.init(
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
-      },
+        },
+        gasoline: {
+            type: DataTypes.BOOLEAN,
+        },
+        diesel: {
+            type: DataTypes.BOOLEAN,
+        },
+        electric: {
+            type: DataTypes.BOOLEAN,
+        },
         miles: {
             type: DataTypes.INTEGER,
         },

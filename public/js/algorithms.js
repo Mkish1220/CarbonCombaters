@@ -15,7 +15,7 @@ var waterInput = document.getElementById("water").value.trim();
 var meatDiet = document.getElementById("meat").value.trim();
 var averageDiet = document.getElementById("average").value.trim();
 var nobeefDiet = document.getElementById("nobeef").value.trim();
-var vegitarianDiet = document.getElementById("vegitarian").value.trim();
+var vegetarianDiet = document.getElementById("vegetarian").value.trim();
 var veganDiet = document.getElementById("vegan").value.trim();
 
 var carScore = '';
@@ -138,12 +138,12 @@ if (nobeefDiet === 0) {
 }
     console.log(nobeefScore);
 
-if (vegitarianDiet === 0) {
+if (vegetarianDiet === 0) {
     vegetarianScore = 0;
 } else {
     vegetarianScore = 1.7;
 }
-    console.log(vegitarianScore);
+    console.log(vegetarianScore);
 
 if (veganDiet === 0) {
     veganScore = 0;

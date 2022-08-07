@@ -4,8 +4,6 @@ const loginFormHandler = async (event) => {
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
-    //PW - the conditional here reads email and password, but the front end asks for username and pass word for the sign in.  
-    // PW - Maybe we should change the sign in to say login instead
   
     if (email && password) {
       const response = await fetch('/api/users/login', {

@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class newQuestions extends Model {}
+class NewQuestions extends Model {}
 
-newQuestions.init(
+NewQuestions.init(
     {
         id: {
         type: DataTypes.INTEGER,
@@ -38,20 +38,20 @@ newQuestions.init(
         water: {
             type: DataTypes.INTEGER,
         },     
-        fuel: {
+        meat: {
             type: DataTypes.BOOLEAN,
         },
-        recycle: {
+        average: {
             type: DataTypes.BOOLEAN,
         },
-        bbq: {
-            type: DataTypes.INTEGER,
+        nobeef: {
+            type: DataTypes.BOOLEAN,
         },
-        phones: {
-            type: DataTypes.INTEGER,
+        vegetarian: {
+            type: DataTypes.BOOLEAN,
         },
-        water: {
-            type: DataTypes.INTEGER,
+        vegan: {
+            type: DataTypes.BOOLEAN,
         },        
     },
     {
@@ -61,4 +61,4 @@ newQuestions.init(
     }
 );
 
-module.exports = newQuestions;
+module.exports = NewQuestions;

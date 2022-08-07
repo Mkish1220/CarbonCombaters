@@ -12,17 +12,17 @@ NewQuestions.init(
         autoIncrement: true
       },
         miles: {
-        type: DataTypes.INTEGER,
+            type: DataTypes.INTEGER,
         },
         hours: {
-         type: DataTypes.INTEGER,
+            type: DataTypes.INTEGER,
         },
         nattie: {
             type: DataTypes.BOOLEAN,
-           },
+        },
         liquid: {
             type: DataTypes.BOOLEAN,
-           },  
+        },  
         fuel: {
             type: DataTypes.BOOLEAN,
         },

@@ -126,7 +126,7 @@ if (phoneInput === 0) {
 if (waterInput === 0) {
     waterScore = 0;
 } else {
-    waterScore = waterInput * 0.000828;
+    waterScore = waterInput * 0.30222;
 }
     console.log(waterScore);
 
@@ -151,12 +151,15 @@ if (nobeefDiet === 0) {
 }
     console.log(nobeefScore);
 
+
 if (vegetarianDiet === 0) {
+
     vegetarianScore = 0;
 } else {
     vegetarianScore = 1.7;
 }
     console.log(vegetarianScore);
+
 
 if (veganDiet === 0) {
     veganScore = 0;

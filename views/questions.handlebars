@@ -2,37 +2,68 @@
     <h2>Lets Learn More About You!</h2>
 </div>
 
-<form id="msform">
+{{!-- <form id="msform">
 		<div class="form-group">
 			<label for="car">Number of cars you own</label>
       <div class="input-group">
         <input class="form-control" id="carInput" type="number" min="0">
       </div>
-		</div>
 
-    <div class="form-group gas">
+		</div> --}}
+    <div class="item">
+        <p>How many cars do you own?<span class="required">*</span></p>
+        <input type="text" name="cars" id='carInput' required/>
+      </div>
+
+    {{!-- <div class="form-group gas">
+
       <label for="home">If you have a car, what does it run on?</label>
       <select class="custom-select" id="inputGroupSelect01">
         <option selected>None</option>
         <option value="1" id="gasoline">Gasoline</option>
         <option value="2" id="diesel">Diesel</option>
         <option value="3" id="electric">Electric</option>
-    </div>
 
-    <div class="form-group">
+    </div> --}}
+    <div class="question">
+        <p>If you have a car, what does it run on?</p>
+        <div class="question-answer">
+          <input type="radio" value="none" id="radio_1 gasoline" name="gas"
+          <label for="radio_1" class="radio"><span>Gasoline</span></label>
+          <input type="radio" value="none" id="radio_2 diesel" name="gas"
+          <label for="radio_2" class="radio"><span>Diesel</span></label>
+            <input type="radio" value="none" id="radio_3 electric" name="gas"
+          <label for="radio_3" class="radio"><span>Electric</span></label>
+        </div>
+      </div>
+
+    {{!-- <div class="form-group">
+
 			<label for="car">How many miles do you drive per week?</label>
       <div class="input-group">
         <input class="form-control" id="miles" type="number" min="0">
       </div>
-		</div>
-    
-    <div class="form-group">
+
+		</div> --}}
+    <div class="item">
+        <p>How many miles do you drive per week?</p>
+        <input type="number" name="miles" id="miles" min="0">
+      </div>
+
+    {{!-- <div class="form-group">
+
 			<label for="home">How many hours do you spend at home per day</label>
       <div class="input-group">
         <input class="form-control" id="electricity" type="number" min="0">
       </div>
-		</div>
-  <div class="form-group">
+
+		</div> --}}
+
+        <div class="item">
+        <p>How many hour do you spend at home daily?<span class="required">*</span></p>
+        <input type="number" name="hours" id="electricity" min="0"required/>
+      </div>
+  {{!-- <div class="form-group">
 
     <label for="home">What type of gas does your home use?</label>
     <select class="custom-select" id="inputGroupSelect01">
@@ -40,9 +71,24 @@
       <option value="1" id="naturalGas">Natrual Gas</option>
       <option value="2" id="petrol">Liquid Petrol</option>
       <option value="3" id="fuelOil">Fuel Oil</option>
-    </select>
 
-	  <label>Do you recycle</label>
+    </select> --}}
+<div class="question">
+        <p>What type of gas does your home use><span class="required">*</span></p>
+        <div class="question-answer">
+          <input type="radio" value="none" id="radio_1 naturalGas" name="fuel" required/>
+          <label for="radio_1" class="radio"><span>Natural Gas</span></label>
+          <input type="radio" value="none" id="radio_2 petrol" name="fuel" required/>
+          <label for="radio_2" class="radio"><span>Liquid Petrol</span></label>
+            <input type="radio" value="none" id="radio_3 fuelOil" name="fuel" required/>
+          <label for="radio_3" class="radio"><span>Fuel Oil</span></label>
+            <input type="radio" value="none" id="radio_4" name="fuel" required/>
+          <label for="radio_4" class="radio"><span>None/Other</span></label>
+        </div>
+      </div>
+
+	  {{!-- <label>Do you recycle</label>
+
 			<div class="radio">
 				<label>
 					<input type="radio" name="recycleOptions" id="recyle" value="option1">
@@ -55,39 +101,88 @@
           No
 		  </label>
 	  </div>
-  </div>
+  </div> --}}
 
-  <div class="form-group">
+
+  <div class="question">
+        <p>Do you recycle?<span class="required">*</span></p>
+        <div class="question-answer">
+          <input type="radio" value="none" id="radio_1 yes" name="recycle" required/>
+          <label for="radio_1" class="radio"><span>Yes</span></label>
+          <input type="radio" value="none" id="radio_2 no" name="recycle" required/>
+          <label for="radio_2" class="radio"><span>No</span></label>
+        </div>
+      </div>
+
+  {{!-- <div class="form-group">
+
 		<label for="car">How many times do you BBQ/year?</label>
     <div class="input-group">
       <input class="form-control" id="propane" type="number" min="0">
     </div>
-	</div>
+	</div> --}}
 
-  <div class="form-group">
-		<label for="car">How many smart phones are in your household?</label>
+  <div class="item">
+        <p>How many hour do you spend at home daily?</p>
+        <input type="number" name="bbq" id="propane" min="0">
+      </div>
+
+  {{!-- <div class="form-group">
+		<label for="car">How many smartphones are in your household?</label>
+
     <div class="input-group">
       <input class="form-control" id="phone" type="number" min="0">
     </div>
-	</div>
-  
-  <div class="form-group">
+	</div> --}}
+
+   <div class="item">
+        <p>How many smartphones are in your household?<span class="required">*</span></p>
+        <input type="number" name="phone" id="phone" min="0"required/>
+      </div>
+
+
+  {{!-- <div class="form-group">
+
 		<label for="car">How many plactic bottles do you use?</label>
     <div class="input-group">
       <input class="form-control" id="water" type="number" min="0">
     </div>
-	</div>
 
-   <div class="form-group">
+	</div> --}}
+
+    <div class="item">
+        <p>How many water bottles do you drink in a day?<span class="required">*</span></p>
+        <input type="number" name="plastic" id="water" min="0"required/>
+      </div>
+
+   {{!-- <div class="form-group">
+
     <label for="home">How much meat do you consume?</label>
     <select class="custom-select" id="inputGroupSelect01">
       <option value="1" id="meat">Meat Lover</option>
       <option value="2" id="average">Average</option>
       <option value="3" id="nobeef">No beef</option>
-      <option value="4" id="vegetarian">Vegetarian</option>
+      <option value="4" id="vegitarian">Vegitarian</option>
       <option value="5" id="vegan">Vegan</option>
     </select>
-  </div>
+  </div> --}}
+
+  <div class="question">
+        <p>What is your diet like?<span class="required">*</span></p>
+        <div class="question-answer">
+          <input type="radio" value="none" id="radio_1 meat" name="meatlover" required/>
+          <label for="radio_1" class="radio"><span>Meat Lover Diet</span></label>
+          <input type="radio" value="none" id="radio_2 average" name="average" required/>
+          <label for="radio_2" class="radio"><span>Average Diet</span></label>
+            <input type="radio" value="none" id="radio_3 nobeef" name="nobeef" required/>
+          <label for="radio_3" class="radio"><span>No Beef Diet</span></label>
+            <input type="radio" value="none" id="radio_4 vegitarian" name="vegitarian" required/>
+          <label for="radio_4" class="radio"><span>Vegitarian</span></label>
+             <input type="radio" value="none" id="radio_5 vegan" name="vegan" required/>
+          <label for="radio_5" class="radio"><span>Vegan</span></label>
+        </div>
+      </div>
+
   <br/>
 	<button id="calculate-btn" type="button" class="btn btn-success btn-lg btn-block">Calculate</button>
 </form>

@@ -4,7 +4,8 @@ var animating;
 
 
 
-$(".next").click(function(){
+$(".next").click( function(){
+  
     if(animating) return false;
     animating = true
 
@@ -33,35 +34,14 @@ $(".next").click(function(){
         },
         easing: 'easeInOutBack'
     })
-    const questionsFormHandler = async (event) => {
-        event.preventDefault();
-        const country = document.getElementById("country").value.trim();
-        // const email = document.getElementById("signEmail").value.trim();
-        // const password = document.getElementById("signPass").value.trim();
     
-        // sends a post to create the user
-        if (country) {
-            const response = await fetch('/api/questions', {
-              method: 'POST',
-              body: JSON.stringify({country}),
-              headers: {'Content-Type': 'application/json'},
-            });
-        
-            // takes the user to the questions page if ok
-            if (response.ok) {
-              alert("Your Profile has been updated");
-            } else {
-              alert("Please Try Again");
-            }
-          }
-        };
-
 })
 
-$(".previous").click(function(){
+$(".previous").click( function(){
+  console.log("function 2")
 	if(animating) return false;
 	animating = true;
-	
+
 	current_fs = $(this).parent();
 	previous_fs = $(this).parent().prev();
 	
@@ -85,6 +65,34 @@ $(".previous").click(function(){
 		easing: 'easeInOutBack'
 	});
 });
+
+
+// const questionsFormHandler = async (event) => {
+//   console.log("function 3")
+//   event.preventDefault();
+//   const country = document.getElementById("country").value.trim();
+//   // const email = document.getElementById("signEmail").value.trim();
+//   // const password = document.getElementById("signPass").value.trim();
+
+//   // sends a post to create profile data
+//   if (country) {
+//       const response = await fetch('/api/questions', {
+//         method: 'POST',
+//         body: JSON.stringify({country}),
+//         headers: {'Content-Type': 'application/json'},
+//       });
+  
+//       // lets the user know their info is saved
+//       if (response.ok) {
+//         alert("Your Profile has been updated");
+//       } else {
+//         alert("Please Try Again");
+//       }
+//     }
+//   };
+
+  // document.addEventListener("submit", test, questionsFormHandler)
+  // document.getElementById("submitBtn").addEventListener("submit", test, questionsFormHandler)
 
 $(".submit").click(function(){
 	return false;

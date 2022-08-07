@@ -14,30 +14,30 @@ Questions.init(
         country: {
         type: DataTypes.STRING,
         },
-        // state: {
-        //  type: DataTypes.STRING,
-        // },
-        // cpass: {
-        //     type: DataTypes.INTEGER,
-        //    },
-        // make: {
-        //     type: DataTypes.STRING,
-        //    },  
-        // model: {
-        //     type: DataTypes.STRING
-        // },
-        // year: {
-        //     type: DataTypes.INTEGER
-        // },
-        // firstName: {
-        //     type: DataTypes.STRING
-        //     },
-        // lastName: {
-        //     type: DataTypes.STRING
-        //         },
-        // phone: {
-        //     type: DataTypes.INTEGER
-        //         },       
+        state: {
+         type: DataTypes.STRING,
+        },
+        cpass: {
+            type: DataTypes.INTEGER,
+           },
+        make: {
+            type: DataTypes.STRING,
+           },  
+        model: {
+            type: DataTypes.STRING
+        },
+        year: {
+            type: DataTypes.INTEGER
+        },
+        firstName: {
+            type: DataTypes.STRING
+            },
+        lastName: {
+            type: DataTypes.STRING
+                },
+        phone: {
+            type: DataTypes.INTEGER
+                },       
     },
     {
         sequelize,

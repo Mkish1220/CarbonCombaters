@@ -4,17 +4,26 @@ const loginFormHandler = async (event) => {
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
+  
     if (email && password) {
       const response = await fetch('/api/users/login', {
         method: 'POST',
-        body: JSON.stringify({ email, password }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/profile:id');
-      } else {
+        // body: JSON.stringify({ email, password }),
+        // headers: { 'Content-Type': 'application/json' },
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: form.email.value,
+          password: form.password.value,
+        }),
+      })
+  // PW - where is this supposed to be taking them? to their profile page based on user id?  i dont think we have that set up.  
+      if (data.error) {
         alert('Failed to log in.');
+      } else {
+        document.location.replace('/profile');
       }
     }
   };

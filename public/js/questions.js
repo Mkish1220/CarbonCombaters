@@ -41,15 +41,15 @@ $(".next").click(function(){
     
         // sends a post to create the user
         if (country) {
-            const response = await fetch('/api/users', {
+            const response = await fetch('/api/questions', {
               method: 'POST',
-              body: JSON.stringify({username, email, password}),
+              body: JSON.stringify({country}),
               headers: {'Content-Type': 'application/json'},
             });
         
             // takes the user to the questions page if ok
             if (response.ok) {
-              document.location.replace('/questions');
+              alert("Your Profile has been updated");
             } else {
               alert("Please Try Again");
             }

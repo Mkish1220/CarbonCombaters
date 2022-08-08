@@ -44,18 +44,6 @@ li{
   margin-top: 10%;
   font-size: .8rem;
 }
-
-
-/* ==============  SIGN UP PAGE  */
-
-.sign-up-img{
-    position: absolute;
-    border-radius: 50%;
-    width: 70%;
-    height: 60%;
-    left: 15%
-}
-
 /* ====================================== HIGH CHARTS PIE CHART LEARN MORE PAGE====================================== */
 /* .highcharts-figure,
 .highcharts-data-table table {
@@ -426,4 +414,14 @@ input[type="number"] {
 .footer-subtext {
   text-align: center;
   margin-top: 15px;
+}
+
+/* sign up page */
+.signup-btn {
+  background-color: var(--ocean);
+}
+
+.signup-title {
+  color: var(--plants);
+  font-family: 'Zen Maru Gothic', sans-serif;;
 }

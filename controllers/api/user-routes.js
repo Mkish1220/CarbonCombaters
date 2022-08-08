@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const User = require('../../models/user');
+const { User, NewQuestions } = require('../../models/user');
+
 
 // CREATE new user
 router.post('/', async (req, res) => {
@@ -72,5 +73,50 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
+
+// Get user data from DB
+router.get('/', async (req, res) => { 
+  try {
+
+      const profileData = await NewQuestions.findAll({
+          where: {
+              user_id: req.session.user_id
+          },
+          attributes: [
+              'gasoline',
+              'diesel',
+              'electric',
+              'miles',
+              'hours',
+              'nattie',
+              'liquid',
+              'fuel',
+              'recycle',
+              'bbq',
+              'phones',
+              'water',
+              'meat',
+              'average',
+              'nobeef',
+              'vegetarian',
+              'vegan',
+          ],
+          
+      });
+      // Serialize data so the template can read it
+      const profileCharts = profileData.map((profileCharts) => profileCharts.get({ plain: true }));
+      
+      res.render('profile', {
+          layout: 'profile.handlebars', profileCharts,
+          logged_in: req.session.logged_in,
+      });
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
+
+
 
 module.exports = router;

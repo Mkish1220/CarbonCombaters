@@ -60,6 +60,53 @@ li{
 
 
 
+.footer {
+  background-color: black;
+  border-top: solid 2px var(--plants);
+  box-shadow: 0 0 10px 5px var(--forest);
+  margin-top: 20px;
+  padding-bottom: 15px;
+}
+
+.github-link {
+  margin-bottom: 20px;
+}
+
+.fa-github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--grass);
+}
+
+.username {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-family: niveau-grotesk, sans-serif;
+  font-weight: 600;
+  color: var(--grass);
+}
+
+.fa-github:hover,
+.username:hover {
+  color: var(--plants);
+  cursor: pointer;
+}
+
+.footer-text {
+  text-align: center;
+  font-family: niveau-grotesk, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--forest);
+}
+
+.footer-subtext {
+  text-align: center;
+  margin-top: 15px;
+}
 /* ====================================== HIGH CHARTS PIE CHART LEARN MORE PAGE====================================== */
 /* .highcharts-figure,
 .highcharts-data-table table {

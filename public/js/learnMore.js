@@ -67,6 +67,7 @@
 
 // ========================== HIGH CHARTS PIE CHART FOR VEHICLE EMISSIONS=================================================//
 
+
 // Highcharts.chart('containerB', {
 //     chart: {
 //         renderTo: "chart-B",
@@ -134,6 +135,7 @@
 //         }]
 //     }]
 // });
+
 // ========================== SLIDESHOW JAVASCRIPT =================================================//
 // var slideIndex = 1;
 // showSlides(slideIndex);

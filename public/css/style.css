@@ -196,7 +196,27 @@ input[type="number"] {
 
 .spacer {
     height: 100px;
-} */
+
+}
+
+.learnHeader {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+.sign-btn {
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  background-color: var(--ocean);
+}
+
+.carousel-size {
+  height: 125px;
+}
+
+
 /* Slideshow container */
 .slideshow-container {
   position: relative;
@@ -322,10 +342,15 @@ textarea {
   border-radius: 3px;
 }
 
+.nav-title {
+  color: var(--ocean);
+  font-size: 2rem;
+
 select {
   width: 100%;
   padding: 7px 0;
   background: transparent;
+
 }
 
 textarea {

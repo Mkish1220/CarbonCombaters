@@ -1,25 +1,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-<nav class="navbar navbar-expand-lg bg-light">
+
+<nav class="navbar navbar-expand-lg contact-nav">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Carbon Combaters</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
+        <a class="navbar nav-title" href="#">Carbon Combaters</a>
+            <ul class="navbar nav-links">
+                <li class="nav-item links">
                     <a class="login-link" href="/">Log In</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item links">
                     <a class="learn-link" href="/learn">Learn More</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item links">
                     <a class="signup-link" href="/sign">Sign Up</a>
                 </li>
             </ul>
-        </div>
     </div>
 </nav>
 <div class="jumbotron">
@@ -43,11 +38,11 @@
         <div class="form-group">
             <label for="userQuestion">Please describe your issue or question.</label>
             <textarea class="form-control" id="userQuestion" rows="3"></textarea>
-            
-   <input type="submit" name="submit" class="submit action-button" value="Submit" />
-    <a class="btn btn-primary btn-lg" href="/" role="button">Log out</a>
-
+        <input type="submit" name="submit" class="submit action-button" value="Submit" />
         </div>
+        {{#if loggedIn}}     
+        <a class="btn btn-primary btn-lg" href="/" role="button">Log out</a>
+        {{/if}}
     </form>
     
 </div>
@@ -55,10 +50,10 @@
 <footer class="footer">
     <div class="columns github-link">
         <div class="column github-icon"><a href="https://github.com/pbnj1" target="_blank" class="github-hover"><i class="fab fa-github fa-3x"></i><p class="username">pbnj1</p></a></div>
-        <div class="column"><a href="https://github.com/LuluKap" target="_blank" class="github-hover"><i class="fab fa-github fa-3x"></i><p class="username">LuluKap</p></a></div>
-        <div class="column"><a href="https://github.com/Ckratz17" target="_blank" class="github-hover"><i class="fab fa-github fa-3x"></i><p class="username">Ckratz17</p></a></div>
-        <div class="column"><a href="https://github.com/Mkish420" target="_blank" class="github-hover"><i class="fab fa-github fa-3x"></i><p class="username">Mkish420</p></a></div>
-        <div class="column"><a href="https://github.com/DRCallaghan" target="_blank" class="github-hover"><i class="fab fa-github fa-3x"></i><p class="username">DRCallaghan</p></a></div>
+        <div class="column github-icon"><a href="https://github.com/LuluKap" target="_blank" class="github-hover"><i class="fab fa-github fa-3x"></i><p class="username">LuluKap</p></a></div>
+        <div class="column github-icon"><a href="https://github.com/Ckratz17" target="_blank" class="github-hover"><i class="fab fa-github fa-3x"></i><p class="username">Ckratz17</p></a></div>
+        <div class="column github-icon"><a href="https://github.com/Mkish420" target="_blank" class="github-hover"><i class="fab fa-github fa-3x"></i><p class="username">Mkish420</p></a></div>
+        <div class="column github-icon"><a href="https://github.com/DRCallaghan" target="_blank" class="github-hover"><i class="fab fa-github fa-3x"></i><p class="username">DRCallaghan</p></a></div>
     </div>
 </footer>
 

@@ -1,4 +1,4 @@
-<section class="vh-100" style="background-color: white">
+{{!-- <section class="vh-100" style="background-color: white">
   <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-12 col-xl-11">
@@ -56,12 +56,12 @@
                       
                       <input type="checkbox" name="nattie" value="nattie" id="nattie" checked>
                       <input type="checkbox" name="liquid" value="liquid" id="liquid" checked>
-                      <input type="checkbox" name="fuel" value="fuel" id="fuel" checked>
+                      <input type="checkbox" name="fuel" value="fuel" id="fuel" checked> --}}
                       {{!-- <option selected>None</option> --}}
                       {{!-- <option value="" id="naturalGas">Natrual Gas</option>
                       <option value="" id="petrol">Liquid Petrol</option>
                       <option value="" id="fuelOil">Fuel Oil</option> --}}
-                    </select> 
+                    {{!-- </select>  --}}
 
 
 
@@ -73,7 +73,7 @@
                     </div>
                   </div> --}}
                   
-                  <div class="d-flex flex-row align-items-center mb-4">
+                  {{!-- <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="bbq" id="bbq" class="form-control" />
@@ -124,21 +124,7 @@
       </div>
     </div>
   </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</section> --}}
 {{!-- <div class="d-flex p-2 justify-content-center">
     <h2>Lets Learn More About You!</h2>
 </div>
@@ -241,13 +227,13 @@
 	<button id="calculate-btn" type="submit" class="btn btn-success btn-lg btn-block">Calculate</button>
 </form> --}}
 
-<script src="./js/newQuestions.js"></script>
+{{!-- <script src="./js/newQuestions.js"></script> --}}
 
 
 
 {{!-- ALL THE COMMENTED OUT CODE BELOW IS FOR A FORM THAT BREAKS THE SUBMIT BUTTON ON THE NEWQUESTIONS.JS FILE --}}
 
-{{!-- 
+
 <div class="d-flex p-2 justify-content-center">
     <h2>Lets Learn More About You!</h2>
 </div>
@@ -266,178 +252,131 @@
 </div>
 
     <div class="form-group gas">
+{{!-- ================ WHAT DOES YOUR CAR RUN ON =========================== --}}
 
-      <label for="home">If you have a car, what does it run on?</label>
-      <select class="custom-select" id="inputGroupSelect01">
-        <option selected>None</option>
-        <option value="1" id="gasoline">Gasoline</option>
-        <option value="2" id="diesel">Diesel</option>
-        <option value="3" id="electric">Electric</option>
-
+<div class="question">
+    <p>If you have a car, what does it run on?<span class="required">*</span></p>
+    <div class="question-answer">
+    
+    <input type="radio"  id="gasoline" name="gasoline" required/>
+    <label for="gasoline" class="radio"><span>Gasoline</span></label>
+    
+    <input type="radio"  id="diesel" name="gasoline" required/>
+    <label for="diesel" class="radio"><span>Diesel</span></label>
+    
+    <input type="radio" id="electric" name="electric" required/>
+   <label for="electric" class="radio"><span>Electric</span></label>
+    
     </div>
-                              <div class="question">
-                                  <p>If you have a car, what does it run on?</p>
-                                  <div class="question-answer">
-                                    <input type="radio" value="none" id="radio_1 gasoline" name="gas"
-                                    <label for="radio_1" class="radio"><span>Gasoline</span></label>
-                                    <input type="radio" value="none" id="radio_2 diesel" name="gas"
-                                    <label for="radio_2" class="radio"><span>Diesel</span></label>
-                                      <input type="radio" value="none" id="radio_3 electric" name="gas"
-                                    <label for="radio_3" class="radio"><span>Electric</span></label>
-                                  </div>
-                                </div> 
+    </div> 
+{{!-- ================ WHAT DOES YOUR CAR RUN ON =========================== --}}
 
-  <div class="form-group"> 
-
+ {{!--      miles IS CHANGED AND DONE            --}}
+    <div class="form-group"> 
 			<label for="car">How many miles do you drive per week?</label>
       <div class="input-group">
-        <input class="form-control" id="miles" type="number" min="0">
+        <input class="form-control" id="miles" type="miles" min="0">
       </div>
 
-		</div> 
-                  <div class="item">
-                <p>How many miles do you drive per week?</p>
-                <input type="number" name="miles" id="miles" min="0">
-                                  </div> 
-
+   {{!--       hours IS CHANGED AND DONE            --}}
      <div class="form-group">
-
 			<label for="home">How many hours do you spend at home per day</label>
       <div class="input-group">
-        <input class="form-control" id="electricity" type="electricity" min="0">
+        <input class="form-control" id="hours" type="hours" min="0">
       </div>
-
 		</div> 
 
-                                    <div class="item">
-                                    <p>How many hour do you spend at home daily?<span class="required">*</span></p>
-                                    <input type="number" name="hours" id="electricity" min="0"required/>
-                                  </div> 
-  <div class="form-group">
 
-    <label for="home">What type of gas does your home use?</label>
-    <select class="custom-select" id="inputGroupSelect01">
-      <option selected>None</option>
-      <option value="1" id="naturalGas">Natrual Gas</option>
-      <option value="2" id="petrol">Liquid Petrol</option>
-      <option value="3" id="fuelOil">Fuel Oil</option>
-
-    </select> 
-                                  <div class="question">
-                                          <p>What type of gas does your home use><span class="required">*</span></p>
-                                          <div class="question-answer">
-                                            <input type="radio" value="none" id="radio_1 naturalGas" name="fuel" required/>
-                                            <label for="radio_1" class="radio"><span>Natural Gas</span></label>
-                                            <input type="radio" value="none" id="radio_2 petrol" name="fuel" required/>
-                                            <label for="radio_2" class="radio"><span>Liquid Petrol</span></label>
-                                              <input type="radio" value="none" id="radio_3 fuelOil" name="fuel" required/>
-                                            <label for="radio_3" class="radio"><span>Fuel Oil</span></label>
-                                              <input type="radio" value="none" id="radio_4" name="fuel" required/>
-                                            <label for="radio_4" class="radio"><span>None/Other</span></label>
-                                          </div>
-                                        </div> 
-
-	   <label>Do you recycle</label>
-
-			<div class="radio">
-				<label>
-					<input type="radio" name="recycleOptions" id="recyle" value="option1">
-						Yes
-				</label>
-			</div>
-		<div class="radio">
-			<label>
-				<input type="radio" name="recycleOptions" id="recycleRadio2" value="option2">
-          No
-		  </label>
-	  </div>
-  </div> 
-
-
-                                    <div class="question">
-                                          <p>Do you recycle?<span class="required">*</span></p>
-                                          <div class="question-answer">
-                                            <input type="radio" value="none" id="radio_1 yes" name="recycle" required/>
-                                            <label for="radio_1" class="radio"><span>Yes</span></label>
-                                            <input type="radio" value="none" id="radio_2 no" name="recycle" required/>
-                                            <label for="radio_2" class="radio"><span>No</span></label>
-                                          </div>
-                                        </div> 
-
-  <div class="form-group">
-
-		<label for="car">How many times do you BBQ/year?</label>
-    <div class="input-group">
-      <input class="form-control" id="propane" type="number" min="0">
+   {{!--       THIS SECTION IS CHANGED AND DONE            --}}
+    <div class="question">
+    <p>What type of gas does your home use><span class="required">*</span></p>
+    <div class="question-answer">
+    
+    <input type="radio"  id="nattie" name="nattie" required/>
+    <label for="nattie" class="radio"><span>Natural Gas</span></label>
+    
+    <input type="radio"  id="liquid" name="fuel" required/>
+    <label for="liquid" class="radio"><span>Liquid Petrol</span></label>
+    
+    <input type="radio" id="fuel" name="fuel" required/>
+   <label for="fuel" class="radio"><span>Fuel Oil</span></label>
+    
+    <input type="radio"  name="none" required/>
+    <label for="none" class="radio"><span>None/Other</span></label>
     </div>
-	</div> 
+    </div> 
+{{!--             THE ABOVE SECTION IS CHANGED AND DONE              --}}
+	   
 
 
+
+     {{!--                   RECYCLE IS CHANGED AND DONE --}}
+     <div class="question">
+    <p>Do You Recycle<span class="required">*</span></p>
+    <div class="question-answer">
+    
+    <input type="radio"  id="recycle" name="recycle" required/>
+    <label for="recycle" class="radio"><span>Yes</span></label>
+    
+    <input type="radio"  id="" name="" required/>
+    <label for="" class="radio"><span>No</span></label>
+    </div>
+    </div> 
+
+{{!--                   RECYCLE IS CHANGED AND DONE --}}
+                                   
+
+
+{{!--           BBQ IS CHANGED AND DONE          --}}
   <div class="item">
         <p>How many times a year do BBQ?</p>
-        <input type="number" name="bbq" id="propane" min="0">
+        <input type="bbq" name="bbq" id="bbq" min="0">
+      </div>
+{{!--           BBQ IS CHANGED AND DONE          --}}
+
+
+{{!--           PHONES IS CHANGED AND DONE          --}}
+
+ <div class="item">
+        <p>How many phones do you use?</p>
+        <input type="phones" name="phones" id="phones" min="0">
       </div>
 
-
-  <div class="form-group">
-		<label for="car">How many smartphones are in your household?</label>
-
-    <div class="input-group">
-      <input class="form-control" id="phone" type="number" min="0">
-    </div>
-	</div> 
-
-                                  <div class="item">
-                                        <p>How many smartphones are in your household?<span class="required">*</span></p>
-                                        <input type="number" name="phone" id="phone" min="0"required/>
-                                      </div> 
-
-
-  <div class="form-group">
-
-		<label for="car">How many plactic bottles do you use?</label>
-    <div class="input-group">
-      <input class="form-control" id="water" type="number" min="0">
-    </div>
-  	</div>
+{{!--           PHONES IS CHANGED AND DONE          --}}
 
 
 
-    <div class="item">
-        <p>How many water bottles do you drink in a day?<span class="required">*</span></p>
-        <input type="number" name="plastic" id="water" min="0"required/>
+{{!--          WATER IS CHANGED AND DONE          --}}
+ <div class="item">
+        <p>How many water bottles do you drink in a day?</p>
+        <input type="water" name="water" id="water" min="0">
       </div>
+{{!--          WATER IS CHANGED AND DONE          --}}
 
-   <div class="form-group">
 
-    <label for="home">How much meat do you consume?</label>
-    <select class="custom-select" id="inputGroupSelect01">
-      <option value="1" id="meat">Meat Lover</option>
-      <option value="2" id="average">Average</option>
-      <option value="3" id="nobeef">No beef</option>
-      <option value="4" id="vegitarian">Vegitarian</option>
-      <option value="5" id="vegan">Vegan</option>
-    </select>
-  </div> 
-
-                                <div class="question">
-                                      <p>What is your diet like?<span class="required">*</span></p>
-                                      <div class="question-answer">
-                                        <input type="radio" value="none" id="radio_1 meat" name="meatlover" required/>
-                                        <label for="radio_1" class="radio"><span>Meat Lover Diet</span></label>
-                                        <input type="radio" value="none" id="radio_2 average" name="average" required/>
-                                        <label for="radio_2" class="radio"><span>Average Diet</span></label>
-                                          <input type="radio" value="none" id="radio_3 nobeef" name="nobeef" required/>
-                                        <label for="radio_3" class="radio"><span>No Beef Diet</span></label>
-                                          <input type="radio" value="none" id="radio_4 vegitarian" name="vegitarian" required/>
-                                        <label for="radio_4" class="radio"><span>Vegitarian</span></label>
-                                          <input type="radio" value="none" id="radio_5 vegan" name="vegan" required/>
-                                        <label for="radio_5" class="radio"><span>Vegan</span></label>
-                                      </div>
-                                    </div> 
+  {{!--        DIET IS CHANGED AND will need formatted        --}}
+<div class="question"></div>                      `               
+<p>What is your diet like?<span class="required">*</span></p>                                     
+<div class="question-answer"></div>                                      
+<input type="radio" id="meat" name="meat" required/>                                        
+<label for="meat" class="radio"><span>Meat Lover Diet</span></label>                                        
+ <input type="radio"  id="average" name="average" required/>                                      
+ <label for="average" class="radio"><span>Average Diet</span></label>                                       
+ <input type="radio" id="nobeef" name="nobeef" required/>                                       
+ <label for="nobeef" class="radio"><span>No Beef Diet</span></label>                                        
+ <input type="radio" value="none" id="radio_4 vegitarian" name="vegitarian" required/>                                         
+<label for="vegetarian" class="radio"><span>Vegitarian</span></label>                                        
+<input type="radio" value="" id="vegan" name="vegan" required/>                                   
+<label for="vegan" class="radio"><span>Vegan</span></label>                                          
+ </div>                                       
+  </div>                                       
+                                          
+                                        
+                                      
+                                    
 
   <br/>
 	<button id="calculate-btn" type="submit" class="btn btn-success btn-lg btn-block">Calculate</button>
 </form>
 
-<script src="./js/newQuestions.js"></script> --}}
+<script src="./js/newQuestions.js"></script> 

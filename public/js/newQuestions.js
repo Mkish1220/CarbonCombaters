@@ -10,8 +10,8 @@ const questionsFormHandler = async (event) => {
     const miles = document.getElementById("miles").value.trim();
     const hours = document.getElementById("hours").value.trim();
     const nattie = document.getElementById("nattie").value.trim();
-    const liquid = document.getElementById("petrol").value.trim();
-    const fuel = document.getElementById("fuelOil").value.trim();
+    const liquid = document.getElementById("liquid").value.trim();
+    const fuel = document.getElementById("fuel").value.trim();
     const recycle = document.getElementById("recycle").value.trim();
     const bbq = document.getElementById("bbq").value.trim();
     const phones = document.getElementById("phones").value.trim();

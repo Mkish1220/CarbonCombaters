@@ -160,7 +160,9 @@ input[type="number"] {
 /* ====================================== HIGH CHARTS PIE CHART LEARN MORE PAGE====================================== */
 /* ======================================== HIGH CHARTS GRAPH PROFILE PAGE ========================================== */
 
+
   #container {
+
     min-width: 310px;
     max-width: 800px;
     height: 400px;
@@ -424,3 +426,33 @@ input[type="number"] {
   color: var(--plants);
   font-family: 'Zen Maru Gothic', sans-serif;;
 }
+
+/* .jumbotron {
+  background-image: url("/css/unique-lake-snow-mountain-clouds-nature-landscape-web-header.jpg");
+  background-size: cover;
+  height: 800px;
+  background-repeat: no-repeat;
+
+}
+/* .container { 
+    position:relative;
+    margin:0;
+    padding:0;
+ }
+  .container video {
+      position:relative;
+      z-index:0;
+  } */
+/* .overlay {
+      position:absolute;
+      top:0;
+      left:0;
+      z-index:1;
+  } 
+
+h1 {
+  color: var(--forest);
+  font-size: 4rem;
+  font-family: 'Russo One', sans-serif;
+  text-align: center;
+} */

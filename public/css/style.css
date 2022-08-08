@@ -345,6 +345,7 @@ textarea {
 .nav-title {
   color: var(--ocean);
   font-size: 2rem;
+}
 
 select {
   width: 100%;

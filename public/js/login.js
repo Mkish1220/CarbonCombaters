@@ -29,3 +29,20 @@ const loginFormHandler = async (event) => {
   };
 
 document.querySelector('login-form').addEventListener('submit', loginFormHandler)
+
+// const express = require('express');
+// const app = express();
+
+// const users = []
+
+// app.set('view engine', 'handlebars');
+// app.use(express.urlencoded ({extended: false}));
+
+// app.get('/', (req, res) => {
+//     res.render('login');
+// })
+
+// app.post('/', (req, res) => {
+// })
+
+// app.listen(3000);

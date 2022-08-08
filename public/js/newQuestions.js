@@ -8,23 +8,23 @@ const questionsFormHandler = async (event) => {
     // const diesel = document.getElementById("diesel").value.trim();
     // const electric = document.getElementById("electric").value.trim();
     // const miles = document.getElementById("miles").value.trim();
-    // const electricity = document.getElementById("electricity").value.trim();
+    const electricity = document.getElementById("electricity").value.trim();
     // const nattie = document.getElementById("naturalGas").value.trim();
     // const petrol = document.getElementById("petrol").value.trim();
     // const fuelOil = document.getElementById("fuelOil").value.trim();
     // error with this value - const recycle = document.getElementById("recycle").value.trim();
-    const phone = document.getElementById("phone").value.trim();
+    // const phone = document.getElementById("phone").value.trim();
     // const water = document.getElementById("water").value.trim();
     // tried - const meat = document.getElementById("meat").value.trim();
     // tried - const average = document.getElementById("average").value.trim();
     // const nobeef = document.getElementById("nobeef").value.trim();
     // const vegetarian = document.getElementById("vegetarian").value.trim();
     // const vegan = document.getElementById("vegan").value.trim();
-    if (phone) 
+    if (electricity) 
     {
     const response = await fetch('/api/newquestions', {
       method: 'POST',
-      body: JSON.stringify({phone}),
+      body: JSON.stringify({electricity}),
       headers: {'Content-Type': 'application/json'},
     });
 

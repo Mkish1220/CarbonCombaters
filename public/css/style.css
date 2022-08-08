@@ -455,4 +455,16 @@ h1 {
   font-size: 4rem;
   font-family: 'Russo One', sans-serif;
   text-align: center;
+} 
+
+.signIn-btn{
+  height: 50px;
+  width: 200px;
+}
+
+#btnSignUp{
+  height: 50px;
+  width: 200px;
+  align-content: center;
+  right: 100px;
 } */

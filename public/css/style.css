@@ -39,20 +39,26 @@ li{
 .dropdown-toggle {
     background-color: var(--forest);
 }
+.learnReferences{
+  display:inline-block;
+  margin-top: 10%;
+  font-size: .8rem;
+}
+
+
+/* ==============  SIGN UP PAGE  */
 
 .sign-up-img{
     position: absolute;
     border-radius: 50%;
-    width: 75%;
-    height: 65%;
-    left: 10%
+    width: 70%;
+    height: 60%;
+    left: 15%
 }
 
-.learnReferences{
-    display:inline-block;
-    margin-top: 10%;
-    font-size: .8rem;
-}
+
+
+
 
 .footer {
   background-color: black;
@@ -352,7 +358,7 @@ input[type="number"] {
     border-radius: 2px;
     border: 1px solid black;
     }
-    }
+    
     input[type=checkbox]:checked + .check:before {
     background: var(--grass);
     }

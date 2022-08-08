@@ -105,10 +105,10 @@ router.get('/', async (req, res) => {
           
       });
       // Serialize data so the template can read it
-      const profile = profileData.map((profile) => profile.get({ plain: true }));
+      const profileCharts = profileData.map((profileCharts) => profileCharts.get({ plain: true }));
       
       res.render('profile', {
-          layout: 'profile.handlebars',
+          layout: 'profile.handlebars', profileCharts,
           logged_in: req.session.logged_in,
       });
   } catch (err) {

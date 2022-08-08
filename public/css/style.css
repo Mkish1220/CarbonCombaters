@@ -40,12 +40,10 @@ li{
     background-color: var(--forest);
 }
 .learnReferences{
-  display:inline-block;
-  margin-top: 10%;
   font-size: .8rem;
 }
 /* ====================================== HIGH CHARTS PIE CHART LEARN MORE PAGE====================================== */
-/* .highcharts-figure,
+.highcharts-figure,
 .highcharts-data-table table {
     min-width: 320px;
     max-width: 800px;
@@ -94,7 +92,7 @@ input[type="number"] {
 
 .spacer {
     height: 100px;
-} */
+}
 /* Slideshow container */
 .slideshow-container {
     position: relative;
@@ -161,7 +159,8 @@ input[type="number"] {
   }
 /* ====================================== HIGH CHARTS PIE CHART LEARN MORE PAGE====================================== */
 /* ======================================== HIGH CHARTS GRAPH PROFILE PAGE ========================================== */
-/* #container {
+
+  #container {
     min-width: 310px;
     max-width: 800px;
     height: 400px;

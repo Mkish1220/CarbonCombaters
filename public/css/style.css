@@ -93,6 +93,24 @@ input[type="number"] {
 .spacer {
     height: 100px;
 }
+
+.learnHeader {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+.sign-btn {
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  background-color: var(--ocean);
+}
+
+.carousel-size {
+  height: 125px;
+}
+
 /* Slideshow container */
 .slideshow-container {
     position: relative;
@@ -345,7 +363,6 @@ input[type="number"] {
 .nav-title {
   color: var(--ocean);
   font-size: 2rem;
-  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .nav-links {

@@ -24,4 +24,7 @@ router.get("/contact", async (req, res) => {
   res.render("contact", { title: "Contact us" });
 });
 
+router.get("/test", async (req, res) => {
+  res.render("test", { title: "TEST" });
+});
 module.exports = router;

@@ -9,7 +9,7 @@ const questionsFormHandler = async (event) => {
     // const electric = document.getElementById("electric").value.trim();
     const miles = document.getElementById("miles").value.trim();
     const hours = document.getElementById("hours").value.trim();
-    const nattie = document.getElementById("naturalGas").value.trim();
+    const nattie = document.getElementById("nattie").value.trim();
     // const liquid = document.getElementById("petrol").value.trim();
     // const fuel = document.getElementById("fuelOil").value.trim();
     // const recycle = document.getElementById("recycle").value.trim();
@@ -38,16 +38,16 @@ const questionsFormHandler = async (event) => {
     //   }
     // }
     // sends a post to create the user
-    if (gasoline || diesel || electric || miles || hours || nattie ||
-         bbq || phones || water || meat ||
-         average || nobeef || vegetarian || vegan
+    if (gasoline ||  miles || hours || nattie ||
+         bbq || phones || water || meat 
+         
         ) 
         {
         const response = await fetch('/api/newquestions', {
           method: 'POST',
-          body: JSON.stringify({gasoline, diesel, electric, miles , hours , nattie ,
-             bbq, phones, water, meat, average, nobeef,
-            vegetarian, vegan
+          body: JSON.stringify({gasoline, miles , hours , nattie ,
+             bbq, phones, water, meat
+           
             }),
           headers: {'Content-Type': 'application/json'},
         });

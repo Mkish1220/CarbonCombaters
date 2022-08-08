@@ -1,4 +1,4 @@
-{{!-- <section class="vh-100" style="background-color: white">
+<section class="vh-100" style="background-color: white">
   <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-12 col-xl-11">
@@ -46,23 +46,37 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="naturalGas" id="naturalGas" class="form-control" />
+                      <input type="nattie" id="nattie" class="form-control" />
                       <label class="form-label" for="">gas: what type of gas does your home use</label>
                     </div>
                   </div>
 
-                  <div class="d-flex flex-row align-items-center mb-4">
+                    <label for="home">What type of gas does your home use?</label>
+                    <select class="custom-select" id="inputGroupSelect01">
+                      
+                      <input type="checkbox" name="nattie" value="nattie" id="nattie" checked>
+                      <input type="checkbox" name="liquid" value="liquid" id="liquid" checked>
+                      <input type="checkbox" name="fuel" value="fuel" id="fuel" checked>
+                      {{!-- <option selected>None</option> --}}
+                      {{!-- <option value="" id="naturalGas">Natrual Gas</option>
+                      <option value="" id="petrol">Liquid Petrol</option>
+                      <option value="" id="fuelOil">Fuel Oil</option> --}}
+                    </select> 
+
+
+
+                  {{!-- <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="miles" id="recycle" class="form-control" />
+                      <input type="recycle" id="recycle" class="form-control" />
                       <label class="form-label" for="">yes: do you recycle</label>
                     </div>
-                  </div>
+                  </div> --}}
                   
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="propane" class="form-control" />
+                      <input type="bbq" id="bbq" class="form-control" />
                       <label class="form-label" for="">how many bbq /label>
                     </div>
                   </div>
@@ -70,7 +84,7 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="naturalGas" id="phone" class="form-control" />
+                      <input type="phones" id="phones" class="form-control" />
                       <label class="form-label" for="">smart phones number</label>
                     </div>
                   </div>
@@ -78,7 +92,7 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="miles" id="water" class="form-control" />
+                      <input type="water" id="water" class="form-control" />
                       <label class="form-label" for="">plastic bottles number</label>
                     </div>
                   </div>
@@ -86,7 +100,7 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="miles" id="meat" class="form-control" />
+                      <input type="meat" id="meat" class="form-control" />
                       <label class="form-label" for="">meat</label>
                     </div>
                   </div>
@@ -110,7 +124,7 @@
       </div>
     </div>
   </div>
-</section> --}}
+</section>
 
 
 
@@ -125,7 +139,7 @@
 
 
 
-<div class="d-flex p-2 justify-content-center">
+{{!-- <div class="d-flex p-2 justify-content-center">
     <h2>Lets Learn More About You!</h2>
 </div>
 
@@ -167,7 +181,7 @@
       <option value="" id="naturalGas">Natrual Gas</option>
       <option value="" id="petrol">Liquid Petrol</option>
       <option value="" id="fuelOil">Fuel Oil</option>
-    </select>
+    </select> --}}
 
   {{!-- <label for="home">Do you recycle?</label>
     <select class="custom-select" id="recycle">
@@ -191,7 +205,7 @@
 	  </div>
   </div> --}}
 
-  <div class="form-group">
+  {{!-- <div class="form-group">
 		<label for="car">How many times do you BBQ/year?</label>
     <div class="input-group">
       <input class="form-control" id="bbq" type="bbq" min="0">
@@ -225,7 +239,7 @@
   </div>
   <br/>
 	<button id="calculate-btn" type="submit" class="btn btn-success btn-lg btn-block">Calculate</button>
-</form>
+</form> --}}
 
 <script src="./js/newQuestions.js"></script>
 

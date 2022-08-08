@@ -24,6 +24,11 @@ Cars.init(
         'vehicle class': {
         type: DataTypes.STRING
         },
+
+        Transmission: {
+        type: DataTypes.STRING
+        },
+
         'CO2 Emissions(g/km)': {
         type: DataTypes.INTEGER
         },

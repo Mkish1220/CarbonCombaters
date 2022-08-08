@@ -8,7 +8,7 @@
             <div class="row justify-content-center">
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Let's Learn more about you</p>
 
                 <form class="mx-1 mx-md-4">
 
@@ -16,16 +16,16 @@
 
 
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="carInput" class="form-control" />
-                      <label class="form-label" for="">Number of cars</label>
+                      <label class="form-label" for="">How many cars do you have?</label>
+                      <input type="cars" name="cars" id="carInput" min="0">
+                    
                     </div>
                   </div>
 
 
   <div class="question">
-                <p>If you have a car, what does it run on FROM OTHER?</p>
+                <p>If you have a car, what does it run on?</p>
                 <div class="question-answer">
                 
                 <div>
@@ -44,19 +44,18 @@
                   </div>
             
  <div class="form-group"> 
-        <label for="car">How many miles do you drive per week FROM OTHER?</label>
+        <label for="car">How many miles do you drive per week?</label>
   <div class="input-group">
-    <input class="form-control" id="miles" type="miles" min="0">
+    <input type="miles" name="miles" id="miles" min="0">
   </div>
 
               
                   
 
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                  <div class="d-flex flex-row align-items-center mb-4"> 
                     <div class="form-outline flex-fill mb-0">
-                      <input type="hours" id="hours" class="form-control" />
-                      <label class="form-label" for="">hours at home</label>
+                      <label class="form-label" for="">How many hours do you spend at home?</label>
+                      <input type="hours" name="hours" id="hours" min="0">
                     </div>
                   </div>
 
@@ -131,7 +130,7 @@
               
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="submit" class="btn btn-primary btn-lg">calculate!</button>
+                    <button type="submit" class="btn btn-primary btn-lg">Calculate!</button>
                   </div>
 
                 </form>

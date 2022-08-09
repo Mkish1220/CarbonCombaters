@@ -1,7 +1,7 @@
-
+{{!-- 
  </div>
 </nav>
-<div class="jumbotron">
+{{!-- <div class="jumbotron">
     {{!-- <h1 class="display-4">Welcome, {{firstName}}</h1> --}}
     <p class="lead">Let's take a look at your carbon footprint at the moment and what you can do to reduce it.</p>
     <hr class="my-4">
@@ -10,7 +10,7 @@
             aria-valuemin="0" aria-valuemax="38" style="width: 75%">Air Travel: 29 tons CO2</div>
     </div>
     {{!-- <p class="lead">At {{airTravelFootprint}} tons of carbon, your air travel footprint is {{airTravelRelation}}. --}}
-        Reducing the amount of vacations you take per year and travelling locally rather than globally are both
+        {{!-- Reducing the amount of vacations you take per year and travelling locally rather than globally are both
         great ways to keep this footprint down.</p>
     <div class="progress">
         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
@@ -18,96 +18,40 @@
     </div>
     {{!-- <p class="lead">At {{groundTravelFootprint}} tons of carbon, your commuting footprint is --}}
         {{!-- {{groundTravelRelation}}. --}}
-        There are many ways to {{questions.gasoline}}reduce your carbon footprint for commuting, but very few are better than either
+        {{!-- There are many ways to {{questions.gasoline}}reduce your carbon footprint for commuting, but very few are better than either
         commuting to work without a car or with an electric car. For more ideas to reduce this footprint, see our
         {{!-- partner site at {{partner site}}.</p> --}}
-    <div class="progress">
+    {{!-- <div class="progress">
         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
             aria-valuemin="0" aria-valuemax="38" style="width: 75%">Air Travel: 29 tons CO2</div>
     </div>
     {{!-- <p class="lead">At {{householdEnergyFootprint}} tons of carbon, your household energy footprint is --}}
         {{!-- {{householdEnergyRelation}}. --}}
-        As cities heat up, it's {{questions}}tempting to keep the A/C on cold blast all year long, or the heat on full blast
+        {{!-- As cities heat up, it's {{questions}}tempting to keep the A/C on cold blast all year long, or the heat on full blast
         during the winter. But reducing usage of air conditioning and heating is the best way to reduce your overall
         electricity usage and is magnitudes more effective than turning off the lights during the day. Additionally,
         keeping computers turned off when not in use can greatly reduce your carbon footprint at home.</p>
     <a class="btn btn-primary btn-lg" href="/learn" role="button">Learn more</a>
     <a class="btn btn-primary btn-lg" href="/questions" role="button">Update my info</a>
     <a class="btn btn-primary btn-lg" href="/" role="button">Log out</a>
-</div>
+</div>  --}}
 
 
-{{!-- <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
-
 <script src="https://code.highcharts.com/modules/accessibility.js"></script> 
 
-
-{{!-- Flag sprites service provided by Martijn Lafeber, --}}
-  {{!-- https://github.com/lafeber/world-flags-sprite/blob/master/LICENSE --> --}}
-
-
-<link
-  rel="/style.css"
-  type="text/css"
-  href="https://github.s3.amazonaws.com/downloads/lafeber/world-flags-sprite/flags32.css"
-/>
-
-<button class="btn contact-btn btn-secondary" type="button">
-  Logout
-</button>
-<div class="buttons">
-  <button id="2020">
-    2020
-  </button>
-  <button id="2021">
-    2021
-  </button>
-  <button id="2022" class="active">
-    2022
-  </button>
-</div>
-<div id="container"></div>
-
-<canvas id="myChart" width="400" height="400"></canvas>
-
-<script>
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [newQuestions.miles, newQuestions.hours, newQuestions.nattie, newQuestions.liquid, newQuestions.fuel, newQuestions.recycle, newQuestions.bbq, newQuestions.phones, newQuestions.water, newQuestions.meat, newQuestions.average, newQuestions.nobeef, newQuestions.vegetarian, newQuestions],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        Chart showing browser market shares. Clicking on individual columns
+        brings up more detailed data. This chart makes use of the drilldown
+        feature in Highcharts to easily switch between datasets.
+    </p>
+</figure>
 
 </script>
 

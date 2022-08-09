@@ -39,6 +39,15 @@ h1 {
   padding: 5px;
 }
 
+.calcBtn{
+  background-color: var(--grass);
+  color: white;
+}
+
+.fw-bold{
+  color: var(--plants);
+}
+
 .signIn-btn{
   height: 50px;
   width: 200px;

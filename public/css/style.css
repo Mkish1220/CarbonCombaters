@@ -5,15 +5,13 @@
   --plants: #3f8c1b;
   --grass: #8cbf1f;
 }
-
 .landingPic {
   background-image: url("/css/landingbanner.jpg");
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat;
 }
-
-/* .container {
+/* .container { 
     position:relative;
     margin:0;
     padding:0;
@@ -23,18 +21,16 @@
       z-index:0;
   } */
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+      position:absolute;
+      top:0;
+      left:0;
+      z-index:1;
+  } 
+img{
+    width: 500px;
+    height: 400px;
+    align-content: flex-start;
 }
-
-img {
-  width: 500px;
-  height: 400px;
-  align-content: flex-start;
-}
-
 h1 {
   color: var(--forest);
   font-size: 4rem;
@@ -75,13 +71,13 @@ h1 {
   font-size: x-large;
 }
 
-#btnLearn {
+#btnLearn{
   height: 75px;
   width: 200px;
   margin: -20px -50px;
-  position: relative;
-  bottom: 60%;
-  left: 50%;
+  position:relative;
+  bottom:60%;  
+  left:50%;
   background-color: var(--sky);
   color: white;
   font-family: 'Russo One', sans-serif;
@@ -98,7 +94,7 @@ li {
 
 .dropdown-toggle {
   background-color: var(--forest);
-  float: right;
+  float:right;
   margin-right: 12px;
 }
 
@@ -169,7 +165,6 @@ li {
   text-align: center;
   margin-top: 15px;
 }
-
 /* ====================================== HIGH CHARTS PIE CHART LEARN MORE PAGE====================================== */
 .highcharts-figure,
 .highcharts-data-table table {
@@ -288,8 +283,16 @@ input[type="number"] {
     background: #f1f7ff;
 }
 
+.youDo {
+  text-align: center ;
+  padding: 10px;
+}
+
+h5{
+  color: var(--plants);
+}
   /* ======================================== QUESTIONAIRE FORM ========================================== */
-input,
+ input,
 select,
 textarea {
   margin-bottom: 10px;
@@ -297,7 +300,7 @@ textarea {
   border-radius: 3px;
 }
 
-p {
+.questions {
   font-weight: bold;
   font-size: 20px;
 }
@@ -333,7 +336,6 @@ input:hover::placeholder,
 a {
   color: black;
 }
-
 .item input:hover,
 .item select:hover,
 .item textarea:hover {
@@ -364,7 +366,6 @@ label.check {
 .question span {
   margin-right: 30px;
 }
-
 span.required {
   margin-left: 0;
   color: var(--plants);
@@ -387,7 +388,6 @@ label.radio:before {
   border-radius: 50%;
   border: 2px solid var(--grass);
 }
-
 label.check:before {
   top: 2px;
   width: 16px;
@@ -396,7 +396,7 @@ label.check:before {
   border: 1px solid var(--plants);
 }
 
-input[type="checkbox"]:checked+.check:before {
+input[type="checkbox"]:checked + .check:before {
   background: var(--grass);
 }
 
@@ -424,8 +424,8 @@ label.check:after {
   opacity: 0;
 }
 
-input[type="radio"]:checked+label:after,
-input[type="checkbox"]:checked+label:after {
+input[type="radio"]:checked + label:after,
+input[type="checkbox"]:checked + label:after {
   opacity: 1;
 }
 
@@ -435,16 +435,13 @@ input[type="checkbox"]:checked+label:after {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
   .city-item input {
     width: calc(50% - 20px);
   }
-
   .city-item select {
     width: calc(50% - 8px);
   }
 }
-
 /*
 input {
   width: calc(100% - 10px);

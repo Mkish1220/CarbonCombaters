@@ -43,18 +43,31 @@ h1 {
   padding: 5px;
 }
 
-.signIn-btn {
+.calcBtn{
+  background-color: var(--grass);
+  color: white;
+}
+
+.fw-bold{
+  color: var(--plants);
+}
+
+.signIn-btn{
   height: 50px;
   width: 200px;
 }
 
-#btnSignUp {
-  height: 75px;
+.login-form {
   width: 200px;
-  margin: -20px -50px;
-  position: relative;
-  bottom: 50%;
-  left: 40%;
+}
+
+#btnSignUp{
+  height:75px; 
+  width:200px; 
+  margin: -20px -50px; 
+  position:relative;
+  bottom:50%; 
+  left:40%;
   font-family: 'Russo One', sans-serif;
   background-color: var(--forest);
   color: white;
@@ -133,6 +146,11 @@ li {
   color: var(--grass);
 }
 
+.facts {
+  font-size: 20px;
+  padding: 10px;
+}
+
 .fa-github:hover,
 .username:hover {
   color: var(--plants);
@@ -153,7 +171,7 @@ li {
 }
 
 /* ====================================== HIGH CHARTS PIE CHART LEARN MORE PAGE====================================== */
-/* .highcharts-figure,
+.highcharts-figure,
 .highcharts-data-table table {
     min-width: 320px;
     max-width: 800px;
@@ -208,13 +226,12 @@ input[type="number"] {
 .learnHeader {
   text-align: center;
   font-size: 50px;
-  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Zen Maru Gothic', sans-serif; 
 }
 
 .sign-btn {
-  display: inline-block;
   height: 40px;
-  width: 100px;
+  width: 100vw;
   background-color: var(--ocean);
 }
 
@@ -222,123 +239,54 @@ input[type="number"] {
   height: 125px;
 }
 
-
-/* Slideshow container */
-.slideshow-container {
-  position: relative;
-  background: #f1f1f1f1;
-}
-
-/* Slides */
-.mySlides {
-  display: none;
-  padding: 80px;
-  text-align: center;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -30px;
-  padding: 16px;
-  color: #888;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  position: absolute;
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-}
-
-/* The dot/bullet/indicator container */
-.dot-container {
-  text-align: center;
-  padding: 20px;
-  background: #ddd;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-/* Add a background color to the active dot/circle */
-.active,
-.dot:hover {
-  background-color: #717171;
-}
-
 /* ====================================== HIGH CHARTS PIE CHART LEARN MORE PAGE====================================== */
 /* ======================================== HIGH CHARTS GRAPH PROFILE PAGE ========================================== */
-/* #container {
+.highcharts-figure,
+.highcharts-data-table table {
     min-width: 310px;
     max-width: 800px;
+    margin: 1em auto;
+}
+
+#container {
     height: 400px;
-    margin: 0 auto;
-  }
+}
 
-  .buttons {
-    min-width: 310px;
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
     text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 0;
-  }
+    width: 100%;
+    max-width: 500px;
+}
 
-  .buttons button {
-    cursor: pointer;
-    border: 1px solid silver;
-    border-right-width: 0;
-    background-color: #f8f8f8;
-    font-size: 1rem;
-    padding: 0.5rem;
-    transition-duration: 0.3s;
-    margin: 0;
-  }
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
 
-  .buttons button:first-child {
-    border-top-left-radius: 0.3em;
-    border-bottom-left-radius: 0.3em;
-  }
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
 
-  .buttons button:last-child {
-    border-top-right-radius: 0.3em;
-    border-bottom-right-radius: 0.3em;
-    border-right-width: 1px;
-  }
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
 
-  .buttons button:hover {
-    color: white;
-    background-color: rgb(158 159 163);
-    outline: none;
-  }
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
 
-  .buttons button.active {
-    background-color: #0051b4;
-    color: white;
-  }
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
 
   /* ======================================== QUESTIONAIRE FORM ========================================== */
 input,
@@ -347,6 +295,11 @@ textarea {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
+}
+
+p {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .nav-title {
@@ -359,6 +312,12 @@ select {
   padding: 7px 0;
   background: transparent;
 
+}
+
+.question-answer {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
 }
 
 textarea {

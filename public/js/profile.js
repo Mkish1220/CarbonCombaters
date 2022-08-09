@@ -1,160 +1,99 @@
-const dataPrev = {
-  2022: [
-    ['South Korea', 0],
-    ['Japan', 0],
-    ['Australia', 0],
-    ['Germany', 11],
-    ['Russia', 24],
-    ['China', 38],
-    ['Great Britain', 29],
-    ['United States', 46]
-  ],
-  2021: [
-    ['South Korea', 13],
-    ['Japan', 0],
-    ['Australia', 0],
-    ['Germany', 0],
-    ['Russia', 22],
-    ['China', 51],
-    ['Great Britain', 19],
-    ['United States', 36]
-  ],
-  2020: [
-    ['South Korea', 0],
-    ['Japan', 0],
-    ['Australia', 0],
-    ['Germany', 13],
-    ['Russia', 27],
-    ['China', 32],
-    ['Great Britain', 9],
-    ['United States', 37]
-  ]
-};
+// Data retrieved from https://gs.statcounter.com/browser-market-share#monthly-202201-202201-bar
 
-const data = {
-  2022: [
-    ['South Korea', 0],
-    ['Japan', 0],
-    ['Australia', 0],
-    ['Germany', 17],
-    ['Russia', 19],
-    ['China', 26],
-    ['Great Britain', 27],
-    ['United States', 46]
-  ],
-  2021: [
-    ['South Korea', 13],
-    ['Japan', 0],
-    ['Australia', 0],
-    ['Germany', 0],
-    ['Russia', 24],
-    ['China', 38],
-    ['Great Britain', 29],
-    ['United States', 46]
-  ],
-  2020: [
-    ['South Korea', 0],
-    ['Japan', 0],
-    ['Australia', 0],
-    ['Germany', 16],
-    ['Russia', 22],
-    ['China', 51],
-    ['Great Britain', 19],
-    ['United States', 36]
-  ]
-};
+// Create the chart
+// Data retrieved from https://gs.statcounter.com/browser-market-share#monthly-202201-202201-bar
 
-const countries = [{
-  name: 'South Korea',
-  flag: 'kr',
-  color: 'rgb(201, 36, 39)'
-}, {
-  name: 'Japan',
-  flag: 'jp',
-  color: 'rgb(201, 36, 39)'
-}, {
-  name: 'Australia',
-  flag: 'au',
-  color: 'rgb(0, 82, 180)'
-}, {
-  name: 'Germany',
-  flag: 'de',
-  color: 'rgb(0, 0, 0)'
-}, {
-  name: 'Russia',
-  flag: 'ru',
-  color: 'rgb(240, 240, 240)'
-}, {
-  name: 'China',
-  flag: 'cz',
-  color: 'rgb(255, 217, 68)'
-}, {
-  name: 'Great Britain',
-  flag: 'gb',
-  color: 'rgb(0, 82, 180)'
-}, {
-  name: 'United States',
-  flag: 'us',
-  color: 'rgb(215, 0, 38)'
-}];
-
-
-const getData = data => data.map((country, i) => ({
-  name: country[0],
-  y: country[1],
-  color: countries[i].color
-}));
-
-const chart = Highcharts.chart('container', {
+// Create the chart
+Highcharts.chart('container', {
   chart: {
     type: 'column'
   },
   title: {
-    text: 'Summer Olympics 2022 - Top 5 countries by Gold medals',
-    align: 'left'
+    align: 'left',
+    text: 'Greenhouse Gas Emissions on Avg.'
   },
-  subtitle: {
-    text: 'Comparing to results from Summer Olympics 2021 - Source: <a href="https://en.wikipedia.org/wiki/2022_Summer_Olympics_medal_table">Wikipedia</a>',
-    align: 'left'
-  },
-  plotOptions: {
-    series: {
-      grouping: false,
-      borderWidth: 0
+  accessibility: {
+    announceNewData: {
+      enabled: true
     }
+  },
+  xAxis: {
+    type: 'category'
+  },
+  yAxis: {
+    title: {
+      text: 'Total percent of impact'
+    }
+
   },
   legend: {
     enabled: false
   },
-  tooltip: {
-    shared: true,
-    headerFormat: '<span style="font-size: 15px">{point.point.name}</span><br/>',
-    pointFormat: '<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y} medals</b><br/>'
+
+  plotOptions: {
+    series: {
+      borderWidth: 0,
+      dataLabels: {
+        enabled: true,
+        format: '{point.y:.1f}%'
+      }
+    }
   },
-  xAxis: {
-    type: 'category',
-    accessibility: {
-      description: 'Countries'
-    },
-    max: 4,
-    labels: {
-      useHTML: true,
-      animate: true,
-      formatter: ctx => {
-        let flag;
 
-        countries.forEach(function (country) {
-          if (country.name === ctx.value) {
-            flag = country.flag;
-          }
-        });
+  tooltip: {
+    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+  },
 
-        return `${flag.toUpperCase()}<br><span class="f32">
-            <span class="flag ${flag}"></span>
-          </span>`;
+  series: [{
+    name: "Factors",
+    colorByPoint: true,
+    data: [{
+        name: "Transportation",
+        y: 27.3,
+        drilldown: "Transportation"
       },
-      style: {
-        textAlign: 'center'
+      {
+        name: "Energy Industry",
+        y: 28.9,
+        drilldown: "Energy"
+      },
+      {
+        name: "Other Fuel Combustions",
+        y: 11.9,
+        drilldown: "Other Fuel Combustions"
+      },
+      {
+        name: "Manufacturing",
+        y: 10.3,
+        drilldown: "Manufacturing"
+      },
+      {
+        name: "Fugitive Emissions",
+        y: 4.7,
+        drilldown: "Fugitive Emissions"
+      },
+      {
+        name: "Industrial Processes",
+        y: 5.6,
+        drilldown: "Industrial Processes"
+      },
+      {
+        name: "Agriculture",
+        y: 9.2,
+        drilldown: null
+      }   ,
+         {
+        name: "Waste",
+        y: 2.0,
+        drilldown: null
+      }
+    ]
+  }],
+  drilldown: {
+    breadcrumbs: {
+      position: {
+        align: 'right'
       }
     }
   },
@@ -162,68 +101,48 @@ const chart = Highcharts.chart('container', {
     title: {
       text: 'Gold medals'
     },
-    showFirstLabel: false
-  }],
-  series: [{
-    color: 'rgb(158, 159, 163)',
-    pointPlacement: -0.2,
-    linkedTo: 'main',
-    data: dataPrev[2022].slice(),
-    name: '2021'
-  }, {
-    name: '2022',
-    id: 'main',
-    dataSorting: {
-      enabled: true,
-      matchByName: true
-    },
-    dataLabels: [{
-      enabled: true,
-      inside: true,
-      style: {
-        fontSize: '16px'
+
+    series: [{
+        name: "Chrome",
+        id: "Chrome",
+       },
+      {
+        name: "Firefox",
+        id: "Firefox",
+        
+      },
+      {
+        name: "Internet Explorer",
+        id: "Internet Explorer",
+      },
+      {
+        name: "Safari",
+        id: "Safari",
+      },
+      {
+        name: "Edge",
+        id: "Edge",
+        },
+      {
+        name: "Opera",
+        id: "Opera",
+        data: [
+          [
+            "v50.0",
+            0.96
+          ],
+          [
+            "v49.0",
+            0.82
+          ],
+          [
+            "v12.1",
+            0.14
+          ]
+        ]
       }
-    }],
-    data: getData(data[2022]).slice()
-  }],
-  exporting: {
-    allowHTML: true
+    ]
   }
-});
-
-const years = [2022, 2021, 2020];
-
-years.forEach(year => {
-  const btn = document.getElementById(year);
-
-  btn.addEventListener('click', () => {
-
-    document.querySelectorAll('.buttons button.active')
-      .forEach(active => {
-        active.className = '';
-      });
-    btn.className = 'active';
-
-    chart.update({
-      title: {
-        text: `Summer Olympics ${year} - Top 5 countries by Gold medals`
-      },
-      subtitle: {
-        text: 'Comparing to results from Summer Olympics ' +
-          (year - 1) + ' - Source: <a href="https://en.wikipedia.org/wiki/' +
-          (year) + '_Summer_Olympics_medal_table">Wikipedia</a>'
-      },
-      series: [{
-        name: year - 1,
-        data: dataPrev[year].slice()
-      }, {
-        name: year,
-        data: getData(data[year]).slice()
-      }]
-    }, true, false, {
-      duration: 800
-    });
-  });
 });
 
 const delButtonHandler = async (event) => {

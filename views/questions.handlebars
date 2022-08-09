@@ -1,4 +1,4 @@
-<section class="vh-100" style="background-color: white">
+<section class="vh-250" style="background-image: url(/css/istockphoto-1310431407-612x612.jpg);">
   <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-12 col-xl-11">
@@ -11,71 +11,66 @@
 
                 <form class="mx-1 mx-md-4">
 
-
-
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <div class="item">
-                      <label class="form-label" for="">How many cars do you have?</label>
-                      <input type="cars" name="cars" id="carInput" min="0">
-
-                    </div>
+                  <div class="form-group item"> 
+                      <p>How many cars do you own?</p>
+                    <div class="input-group">
+                      <input type="cars" name="cars" id="cars" min="0">
+                    </div> 
                   </div>
 
 
-                  <div class="question item">
-                    <p>If you have a car, what does it run on?</p>
-                    <div class="question-answer">
+              <div class="question item">
+                  <p>If you have a car, what does it run on?</p>
+                <div class="question-answer">
+                  <div>
+                    <input type="checkbox" id="gasoline" name="gasoline">
+                    <label for="gasoline" class="checkbox" checked>Gasoline</label>
+                  </div>
 
-                      <div>
-                        <input type="checkbox" id="gasoline" name="gasoline">
-                        <label for="gasoline" class="checkbox" checked>Gasoline</label>
-                      </div>
+                  <div>
+                      <input type="checkbox" id="diesel" name="diesel">
+                      <label for="diesel" class="checkbox" checked>Diesel</label>
+                  </div>
+                
+                  <div>
+                      <input type="checkbox" id="electric" name="electric">
+                      <label for="electric" class="checkbox" checked>Electric</label>
+                  </div>
+                </div>
+              </div>  
+              
+                  <div class="form-group item"> 
+                      <p>How many miles do you drive per week?</p>
+                    <div class="input-group">
+                      <input type="miles" name="miles" id="miles" min="0">
+                    </div> 
+                  </div>
+                  
+                  <div class="form-group item"> 
+                      <p>How many hours do you spend at home?</p>
+                    <div class="input-group">
+                      <input type="hours" name="hours" id="hours" min="0">
+                    </div> 
+                  </div>
 
-                      <div>
-                        <input type="checkbox" id="diesel" name="diesel">
-                        <label for="diesel" class="checkbox" checked>Diesel</label>
-                      </div>
+                  <div class="question">
+                    <p>What type of gas does your home use</p>
+                  <div class="question-answer">
 
-                      <div>
-                        <input type="checkbox" id="electric" name="electric">
-                        <label for="electric" class="checkbox" checked>Electric</label>
-                      </div>
+                    <input type="checkbox"  id="nattie" name="nattie">
+                    <label for="nattie" class="checkbox" value= "nattie" checked><span>Natural Gas</span></label>
 
-                      <div class="form-group item">
-                        <label for="car">How many miles do you drive per week?</label>
-                        <div class="input-group">
-                          <input type="miles" name="miles" id="miles" min="0">
-                        </div>
+                    <input type="checkbox"  id="liquid" name="fuel">
+                    <label for="liquid" class="checkbox" checked><span>Liquid Petrol</span></label>
 
+                    <input type="checkbox" id="fuel" name="fuel">
+                    <label for="fuel" class="checkbox" checked><span>Fuel Oil</span></label>
 
-
-
-                        <div class="d-flex flex-row align-items-center mb-4">
-                          <div class="form-outline flex-fill mb-0">
-                            <label class="form-label" for="">How many hours do you spend at home?</label>
-                            <input type="hours" name="hours" id="hours" min="0">
-                          </div>
-                        </div>
-
-                        <div class="question">
-                          <p>What type of gas does your home use</p>
-                          <div class="question-answer">
-
-                            <input type="checkbox" id="nattie" name="nattie">
-                            <label for="nattie" class="checkbox" value="nattie" checked><span>Natural Gas</span></label>
-
-                            <input type="checkbox" id="liquid" name="fuel">
-                            <label for="liquid" class="checkbox" checked><span>Liquid Petrol</span></label>
-
-                            <input type="checkbox" id="fuel" name="fuel">
-                            <label for="fuel" class="checkbox" checked><span>Fuel Oil</span></label>
-
-                            <input type="checkbox" name="none">
-                            <label for="none" class="checkbox" checked><span>None/Other</span></label>
-                          </div>
-                        </div>
-
+                    <input type="checkbox"  name="none">
+                    <label for="none" class="checkbox" checked><span>None/Other</span></label>
+                  
+                  </div>
+                  </div> 
                         <div class="question">
                           <p>Do You Recycle</p>
                           <div class="question-answer">

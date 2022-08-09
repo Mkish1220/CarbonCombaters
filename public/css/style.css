@@ -5,12 +5,11 @@
   --plants: #3f8c1b;
   --grass: #8cbf1f;
 }
-.jumbotron {
+.landingPic {
   background-image: url("/css/landingbanner.jpg");
   background-size: cover;
-  height: 1298px;
+  height: 100vh;
   background-repeat: no-repeat;
-
 }
 /* .container { 
     position:relative;

@@ -6,9 +6,9 @@ router.get("/landing", async (req, res) => {
   res.render("landing", { title: "Carbon Combaters" });
 });
 
-// router.get("/profile", async (req, res) => {
-//   res.render("profile", { title: "Profile" });
-// });
+router.get("/profile", async (req, res) => {
+  res.render("profile", { title: "Profile" });
+});
 
 // router.get('/', async (req, res) => {
 //   const newQuestionsData = await NewQuestions.findAll().catch((err) => { 
@@ -24,9 +24,9 @@ router.get('/', async (req, res) => {
     try {
   
         const newQuestionsData = await NewQuestions.findAll({
-            where: {
-                user_id: req.session.user_id
-            },
+            // where: {
+            //     user_id: req.session.user_id
+            // },
             attributes: [
                 'gasoline',
                 'diesel',

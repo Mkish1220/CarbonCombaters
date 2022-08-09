@@ -44,6 +44,10 @@ h1 {
   width: 200px;
 }
 
+.login-form {
+  width: 200px;
+}
+
 #btnSignUp{
   height:75px; 
   width:200px; 
@@ -129,6 +133,11 @@ li {
   color: var(--grass);
 }
 
+.facts {
+  font-size: 20px;
+  padding: 10px;
+}
+
 .fa-github:hover,
 .username:hover {
   color: var(--plants);
@@ -148,7 +157,7 @@ li {
   margin-top: 15px;
 }
 /* ====================================== HIGH CHARTS PIE CHART LEARN MORE PAGE====================================== */
-/* .highcharts-figure,
+.highcharts-figure,
 .highcharts-data-table table {
     min-width: 320px;
     max-width: 800px;
@@ -203,13 +212,12 @@ input[type="number"] {
 .learnHeader {
   text-align: center;
   font-size: 50px;
-  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Zen Maru Gothic', sans-serif; 
 }
 
 .sign-btn {
-  display: inline-block;
   height: 40px;
-  width: 100px;
+  width: 100vw;
   background-color: var(--ocean);
 }
 

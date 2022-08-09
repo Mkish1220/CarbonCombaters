@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, NewQuestions } = require('../../models/user');
+const User = require('../../models/user');
 
 
 // CREATE new user
@@ -104,9 +104,10 @@ router.get('/', async (req, res) => {
           ],
           
       });
-      // Serialize data so the template can read it
+      // Serialize data so the template can read it -gets a plane object out of the data
       const profileCharts = profileData.map((profileCharts) => profileCharts.get({ plain: true }));
       
+      // profileCharts is what will get rendered out into the brackets in the profile.handlebars page...?
       res.render('profile', {
           layout: 'profile.handlebars', profileCharts,
           logged_in: req.session.logged_in,
@@ -115,6 +116,8 @@ router.get('/', async (req, res) => {
       res.status(500).json(err);
   }
 });
+
+
 
 
 

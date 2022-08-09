@@ -24,7 +24,7 @@ const loginFormHandler = async (event) => {
         // }),
       })
       if (response.ok) {
-        document.location.replace('/questions');
+        document.location.replace('/profile');
       } else {
         alert("Please Try Again");
       // if (data.error) {

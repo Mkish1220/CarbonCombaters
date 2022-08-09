@@ -77,7 +77,7 @@ Highcharts.chart('containerB', {
         type: 'pie'
     },
     title: {
-        text: "GREENHOUSE GAS CONTRIBUTION BY FOOD TYPE IN THE AVERAGE DIET"
+        text: "GREENHOUSE GAS CONTRIBUTION BY TRANSPORTATION TYPE"
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'

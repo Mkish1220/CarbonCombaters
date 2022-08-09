@@ -5,12 +5,11 @@
   --plants: #3f8c1b;
   --grass: #8cbf1f;
 }
-.jumbotron {
+.landingPic {
   background-image: url("/css/landingbanner.jpg");
   background-size: cover;
-  height: 1298px;
+  height: 100vh;
   background-repeat: no-repeat;
-
 }
 /* .container { 
     position:relative;
@@ -55,6 +54,8 @@ h1 {
   font-family: 'Russo One', sans-serif;
   background-color: var(--forest);
   color: white;
+  font-family: 'Russo One', sans-serif;
+  font-size: x-large;
 }
 
 #btnLearn{
@@ -67,6 +68,7 @@ h1 {
   background-color: var(--sky);
   color: white;
   font-family: 'Russo One', sans-serif;
+  font-size: x-large;
 }
 
 h3 {

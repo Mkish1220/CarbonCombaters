@@ -56,17 +56,17 @@ if (carFuel === 0) {
     fuelScore = gasScore + dieselScore + carElectric;
 }
 
-    gasScore = carGas * .008887;
-    dieselScore = carDiesel * .01018;
-    electricScore = carElectric * .003288;
-    console.log(fuelScore);
+gasScore = carGas * .008887;
+dieselScore = carDiesel * .01018;
+electricScore = carElectric * .003288;
+console.log(fuelScore);
 
 if (milesWeekly === 0) {
     milesScore = 0;
 } else {
     milesScore = milesWeekly * .00000775;
 }
-    console.log(milesScore);
+console.log(milesScore);
 
 // if (carMpg === 0) {
 //     mpgScore = 0;
@@ -80,42 +80,42 @@ if (hourlyInput === 0) {
 } else {
     electricityScore = hourlyInput * 3.35996;
 }
-    console.log(electricityScore);
+console.log(electricityScore);
 
 if (naturalGasInput === 0) {
     naturalGasScore = 0;
 } else {
     naturalGasScore = 2.29
 }
-    console.log(naturalGasScore);
+console.log(naturalGasScore);
 
 if (liquidpetrolInput === 0) {
     liquidPetrolScore = 0;
 } else {
     liquidPetrolScore = .23;
 }
-    console.log(liquidPetrolScore);
+console.log(liquidPetrolScore);
 
 if (fuelOilInput === 0) {
     fuelOilScore = 0;
 } else {
     fuelOilScore = .28;
 }
-    console.log(fuelOilScore);
+console.log(fuelOilScore);
 
 if (recycleInput === false) {
     recycleScore = 0;
-} else { 
-        recycleScore = -2.89;  
+} else {
+    recycleScore = -2.89;
 }
-    console.log(recycleScore);
+console.log(recycleScore);
 
 if (propaneInput === 0) {
     propaneScore = 0;
 } else {
     propaneScore = propaneInput * .024;
 }
-    console.log(propaneScore);
+console.log(propaneScore);
 
 if (phoneInput === 0) {
     phoneScore = 0;
@@ -128,28 +128,28 @@ if (waterInput === 0) {
 } else {
     waterScore = waterInput * 0.30222;
 }
-    console.log(waterScore);
+console.log(waterScore);
 
 if (meatDiet === 0) {
     meatScore = 0;
 } else {
     meatScore = 3.3;
 }
-    console.log(meatScore);
+console.log(meatScore);
 
 if (averageDiet === 0) {
     averageScore = 0;
 } else {
     averageScore = 2.5;
 }
-    console.log(averageScore);
+console.log(averageScore);
 
 if (nobeefDiet === 0) {
     nobeefScore = 0;
 } else {
     nobeefScore = 1.9;
 }
-    console.log(nobeefScore);
+console.log(nobeefScore);
 
 
 if (vegetarianDiet === 0) {
@@ -158,7 +158,7 @@ if (vegetarianDiet === 0) {
 } else {
     vegetarianScore = 1.7;
 }
-    console.log(vegetarianScore);
+console.log(vegetarianScore);
 
 
 if (veganDiet === 0) {
@@ -166,4 +166,4 @@ if (veganDiet === 0) {
 } else {
     veganScore = 1.5;
 }
-    console.log(veganScore);
+console.log(veganScore);

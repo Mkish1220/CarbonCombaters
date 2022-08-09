@@ -27,7 +27,7 @@ router.post('/login', async (req, res) => {
     const dbUserData = await User.findOne({
       where: {
         email: req.body.email,
-  
+
       },
     });
 
@@ -49,6 +49,7 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.user_id = dbUserData.id;
       console.log(
         '🚀 ~ file: user-routes.js ~ line 57 ~ req.session.save ~ req.session.cookie',
         req.session.cookie
@@ -77,44 +78,44 @@ router.post('/logout', (req, res) => {
 
 
 // Get user data from DB
-router.get('/', async (req, res) => { 
+router.get('/', async (req, res) => {
   try {
 
-      const profileData = await NewQuestions.findAll({
-          where: {
-              user_id: req.session.user_id
-          },
-          attributes: [
-              'gasoline',
-              'diesel',
-              'electric',
-              'miles',
-              'hours',
-              'nattie',
-              'liquid',
-              'fuel',
-              'recycle',
-              'bbq',
-              'phones',
-              'water',
-              'meat',
-              'average',
-              'nobeef',
-              'vegetarian',
-              'vegan',
-          ],
-          
-      });
-      // Serialize data so the template can read it -gets a plane object out of the data
-      const profileCharts = profileData.map((profileCharts) => profileCharts.get({ plain: true }));
-      
-      // profileCharts is what will get rendered out into the brackets in the profile.handlebars page...?
-      res.render('profile', {
-          layout: 'profile.handlebars', profileCharts,
-          logged_in: req.session.logged_in,
-      });
+    const profileData = await NewQuestions.findAll({
+      where: {
+        user_id: req.session.user_id
+      },
+      attributes: [
+        'gasoline',
+        'diesel',
+        'electric',
+        'miles',
+        'hours',
+        'nattie',
+        'liquid',
+        'fuel',
+        'recycle',
+        'bbq',
+        'phones',
+        'water',
+        'meat',
+        'average',
+        'nobeef',
+        'vegetarian',
+        'vegan',
+      ],
+
+    });
+    // Serialize data so the template can read it -gets a plane object out of the data
+    const profileCharts = profileData.map((profileCharts) => profileCharts.get({ plain: true }));
+
+    // profileCharts is what will get rendered out into the brackets in the profile.handlebars page...?
+    res.render('profile', {
+      layout: 'profile.handlebars', profileCharts,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
-      res.status(500).json(err);
+    res.status(500).json(err);
   }
 });
 

@@ -1,15 +1,15 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class NewQuestions extends Model {}
+class NewQuestions extends Model { }
 
 NewQuestions.init(
     {
         id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true
         },
         gasoline: {
             type: DataTypes.BOOLEAN,
@@ -31,7 +31,7 @@ NewQuestions.init(
         },
         liquid: {
             type: DataTypes.BOOLEAN,
-        },  
+        },
         fuel: {
             type: DataTypes.BOOLEAN,
         },
@@ -46,7 +46,7 @@ NewQuestions.init(
         },
         water: {
             type: DataTypes.INTEGER,
-        },     
+        },
         meat: {
             type: DataTypes.BOOLEAN,
         },
@@ -61,7 +61,15 @@ NewQuestions.init(
         },
         vegan: {
             type: DataTypes.BOOLEAN,
-        },        
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                // user comes from a second model in another js file in this folder
+                model: 'user',
+                key: 'id',
+            },
+        }
     },
     {
         sequelize,

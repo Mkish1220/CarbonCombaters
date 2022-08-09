@@ -36,7 +36,7 @@ const questionsFormHandler = async (event) => {
           headers: {'Content-Type': 'application/json'},
         });
 
-        // takes the user to the questions page if ok
+        // takes the user to the profile page if ok and once they get to the profile page they will see their rendered data because it fires off the profile route homepage
         if (response.ok) {
           document.location.replace('/profile');
         } else {

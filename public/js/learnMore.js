@@ -114,7 +114,7 @@ Highcharts.chart('containerB', {
             name: 'Light Duty Truck',
             y: 17,
             color: "pink"
-         
+
         }, {
             name: 'Commercial Aircraft',
             y: 7,
@@ -135,4 +135,3 @@ Highcharts.chart('containerB', {
         }]
     }]
 });
-

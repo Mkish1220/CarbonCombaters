@@ -1,15 +1,95 @@
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/drilldown.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script> 
+<!DOCTYPE html>
+<html lang="en">
 
-<figure class="highcharts-figure">
-    <div id="container"></div>
-    <p class="highcharts-description">
-        Chart showing average US greenhouse emissions
-    </p>
-</figure>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Roboto+Condensed:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" href="./css/jass.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>{{{title}}}</title>
+</head>
 
-</script>
+<body>
+    <div class="jumbotron">
+        {{!-- <h1 class="display-4">Welcome, {{firstName}}</h1> --}}
+        <p class="lead">Let's take a look at your carbon footprint at the moment and what you can do to reduce it.</p>
+        <hr class="my-4">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
+                aria-valuemin="0" aria-valuemax="38" style="width: 75%">Air Travel: 29 tons CO2</div>
+        </div>
+        {{!-- <p class="lead">At {{airTravelFootprint}} tons of carbon, your air travel footprint is
+            {{airTravelRelation}}.
+            --}}
+            Reducing the amount of vacations you take per year and travelling locally rather than globally are both
+            great ways to keep this footprint down.</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
+                aria-valuemin="0" aria-valuemax="38" style="width: 75%">Commuting: 29 tons CO2</div>
+        </div>
+        {{!-- <p class="lead">At {{groundTravelFootprint}} tons of carbon, your commuting footprint is --}}
+            {{!-- {{groundTravelRelation}}. --}}
+            There are many ways to {{profileCharts.gasoline}}reduce your carbon footprint for commuting, but very few
+            are
+            better than either
+            commuting to work without a car or with an electric car. For more ideas to reduce this footprint, see our
+            {{!-- partner site at {{partner site}}.</p> --}}
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
+                aria-valuemin="0" aria-valuemax="38" style="width: 75%">Air Travel: 29 tons CO2</div>
+        </div>
+        {{!-- <p class="lead">At {{householdEnergyFootprint}} tons of carbon, your household energy footprint is --}}
+            {{!-- {{householdEnergyRelation}}. --}}
+            As cities heat up, it's {{profileCharts}}tempting to keep the A/C on cold blast all year long, or the heat
+            on
+            full blast
+            during the winter. But reducing usage of air conditioning and heating is the best way to reduce your overall
+            electricity usage and is magnitudes more effective than turning off the lights during the day. Additionally,
+            keeping computers turned off when not in use can greatly reduce your carbon footprint at home.</p>
+        <a class="btn btn-primary btn-lg" href="/learn" role="button">Learn more</a>
+        <a class="btn btn-primary btn-lg" href="/questions" role="button">Update my info</a>
+        <a class="btn btn-primary btn-lg" href="/" role="button">Log out</a>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+        integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+    <script src="../public/js/profile.js"></script>
+    <script src="../public/js/learnMore.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script> 
+
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            Chart showing average US greenhouse emissions
+        </p>
+    </figure>
+
+</body>
+
+</html>

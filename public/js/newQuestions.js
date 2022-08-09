@@ -36,9 +36,9 @@ const questionsFormHandler = async (event) => {
           headers: {'Content-Type': 'application/json'},
         });
 
-        // takes the user to the profile page if ok and once they get to the profile page they will see their rendered data because it fires off the profile route homepage
+     //the .replace seems to take us to a handlebars page, not a routefile.  if I replace the bottom with /contact it takes up to the contact page.  if I replace it with 
         if (response.ok) {
-          document.location.replace('/profile');
+          document.location.replace('/');
         } else {
           alert("Please Try Again");
         }

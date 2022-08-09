@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
   });
 
 
-//   GET user data
+  // GET user data
   router.get('/', async (req, res) => {
     try {
       const newQuestionsData = await NewQuestions.findAll();
@@ -29,5 +29,8 @@ router.post('/', async (req, res) => {
     }
   });
   
+ 
+  
+
 
   module.exports = router;

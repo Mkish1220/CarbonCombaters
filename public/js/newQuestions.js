@@ -5,7 +5,6 @@ const questionsFormHandler = async (event) => {
   event.preventDefault();
   const user_id = event.target.dataset.userid;
   console.log(user_id);
-  const carInput = document.getElementById("carInput").value.trim();
   const gasoline = document.getElementById("gasoline").checked;
   const diesel = document.getElementById("diesel").checked;
   const electric = document.getElementById("electric").checked;

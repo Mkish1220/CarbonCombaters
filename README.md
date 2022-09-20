@@ -29,7 +29,7 @@
 
 
   ## Contributing Parties
-  👪 UCF Full Stack BootCamp, Mkish420, LuluKap, DRCallaghan, CKratz17, Pbnj1
+  👪 UCF Full Stack BootCamp, Mkish1220, LuluKap, DRCallaghan, CKratz17, Pbnj1
 
   ## Tests
   💻 N/A
@@ -44,8 +44,8 @@
   ✉️ Email me with any questions or concerns: Please refer to github team acces
 
   ## GitHub Username
-   Mkish420, LuluKap, DRCallaghan, CKratz17, Pbnj1 
-  _This README was generated with ❤️ by [README-generator](https://github.com/Mkish420/MyREADME)_
+   Mkish1220, LuluKap, DRCallaghan, CKratz17, Pbnj1 
+  _This README was generated with ❤️ by [README-generator](https://github.com/Mkish1220/MyREADME)_
   
   https://carbon-combaters.herokuapp.com/landing
 
